@@ -22,6 +22,7 @@
 		846D12A21EF3E67100567889 /* LKAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12A11EF3E67100567889 /* LKAttentionViewController.swift */; };
 		846D12A41EF3E67C00567889 /* LKMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12A31EF3E67C00567889 /* LKMineViewController.swift */; };
 		846D12A61EF3EACF00567889 /* LKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12A51EF3EACF00567889 /* LKNavigationController.swift */; };
+		84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84768DE01EF7573C0069AC47 /* LKTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		846D12A11EF3E67100567889 /* LKAttentionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKAttentionViewController.swift; sourceTree = "<group>"; };
 		846D12A31EF3E67C00567889 /* LKMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKMineViewController.swift; sourceTree = "<group>"; };
 		846D12A51EF3EACF00567889 /* LKNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKNavigationController.swift; sourceTree = "<group>"; };
+		84768DE01EF7573C0069AC47 /* LKTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +389,7 @@
 		846D127D1EF3D73200567889 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84768DE01EF7573C0069AC47 /* LKTabBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */,
 				846D128E1EF3D8D400567889 /* LKTabbarController.swift in Sources */,
 				846D12A01EF3E65500567889 /* LKFirstnewViewController.swift in Sources */,
 				846D12901EF3DE7A00567889 /* Comment.swift in Sources */,
@@ -885,6 +889,7 @@
 				846D12591EF3D39A00567889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		846D125A1EF3D39A00567889 /* Build configuration list for PBXNativeTarget "LKBSTests" */ = {
 			isa = XCConfigurationList;
@@ -893,6 +898,7 @@
 				846D125C1EF3D39A00567889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		846D125D1EF3D39A00567889 /* Build configuration list for PBXNativeTarget "LKBSUITests" */ = {
 			isa = XCConfigurationList;
@@ -901,6 +907,7 @@
 				846D125F1EF3D39A00567889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

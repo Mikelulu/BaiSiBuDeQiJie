@@ -53,7 +53,7 @@ extension LKTabbarController {
 
         for vc in vcs {
 
-            self.viewControllers?.append(LKNavigationController.init(rootViewController: vc))
+            self.addChildViewController(LKNavigationController.init(rootViewController: vc))
         }
         
     }
@@ -69,7 +69,9 @@ extension LKTabbarController {
 
             vc.tabBarItem.image = UIImage.init(named: normalImgs[index])
 
-            vc.tabBarItem.selectedImage = UIImage.init(named: selectedImgs[index])
+            vc.tabBarItem.selectedImage = UIImage.init(named: selectedImgs[index])?.withRenderingMode(.alwaysOriginal)
+
+            vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : kSelectColor], for: .selected)
         }
     }
 
@@ -78,7 +80,9 @@ extension LKTabbarController {
 
         self.tabBar.backgroundImage = UIImage.init(named: "tabbar-light")
 
-    }
+        ///  利用KVC把readonly权限改过来
+        self.setValue(LKTabBar(), forKey: "tabBar")
+     }
 
 
 }
