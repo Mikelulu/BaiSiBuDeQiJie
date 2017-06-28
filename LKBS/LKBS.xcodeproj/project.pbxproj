@@ -13,7 +13,6 @@
 		846D12531EF3D39A00567889 /* LKBSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12521EF3D39A00567889 /* LKBSUITests.swift */; };
 		846D128C1EF3D73200567889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12841EF3D73200567889 /* AppDelegate.swift */; };
 		846D128E1EF3D8D400567889 /* LKTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D128D1EF3D8D400567889 /* LKTabbarController.swift */; };
-		846D12901EF3DE7A00567889 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D128F1EF3DE7A00567889 /* Comment.swift */; };
 		846D12921EF3DF1600567889 /* Frame+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12911EF3DF1600567889 /* Frame+Extension.swift */; };
 		846D12941EF3DF5E00567889 /* UI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12931EF3DF5E00567889 /* UI+Extension.swift */; };
 		846D129C1EF3E62800567889 /* LKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D129B1EF3E62800567889 /* LKBaseViewController.swift */; };
@@ -22,7 +21,18 @@
 		846D12A21EF3E67100567889 /* LKAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12A11EF3E67100567889 /* LKAttentionViewController.swift */; };
 		846D12A41EF3E67C00567889 /* LKMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12A31EF3E67C00567889 /* LKMineViewController.swift */; };
 		846D12A61EF3EACF00567889 /* LKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12A51EF3EACF00567889 /* LKNavigationController.swift */; };
+		8476760E1F024916005741BC /* LKTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476760D1F024916005741BC /* LKTool.swift */; };
 		84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84768DE01EF7573C0069AC47 /* LKTabBar.swift */; };
+		84768DE31EF795D60069AC47 /* LKPublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84768DE21EF795D60069AC47 /* LKPublishViewController.swift */; };
+		848FCA651EF9217000A33046 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA641EF9217000A33046 /* Comment.swift */; };
+		848FCA761EF9308000A33046 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA691EF9308000A33046 /* TAAbstractDotView.m */; };
+		848FCA771EF9308000A33046 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA6B1EF9308000A33046 /* TAAnimatedDotView.m */; };
+		848FCA781EF9308000A33046 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA6D1EF9308000A33046 /* TADotView.m */; };
+		848FCA791EF9308000A33046 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA6F1EF9308000A33046 /* TAPageControl.m */; };
+		848FCA7A1EF9308000A33046 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA711EF9308000A33046 /* SDCollectionViewCell.m */; };
+		848FCA7B1EF9308000A33046 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA731EF9308000A33046 /* SDCycleScrollView.m */; };
+		848FCA7C1EF9308000A33046 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA751EF9308000A33046 /* UIView+SDExtension.m */; };
+		ED385B134BFF54C5698CA218 /* Pods_LKBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD02BD959A659763D95EC634 /* Pods_LKBS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		845EA73D1EFA5143008E1415 /* LKBS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LKBS-Bridging-Header.h"; sourceTree = "<group>"; };
 		846D122F1EF3D39900567889 /* LKBS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LKBS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846D12391EF3D39900567889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846D123C1EF3D39900567889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +66,6 @@
 		846D12541EF3D39A00567889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846D12841EF3D73200567889 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846D128D1EF3D8D400567889 /* LKTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTabbarController.swift; sourceTree = "<group>"; };
-		846D128F1EF3DE7A00567889 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		846D12911EF3DF1600567889 /* Frame+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Frame+Extension.swift"; sourceTree = "<group>"; };
 		846D12931EF3DF5E00567889 /* UI+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extension.swift"; sourceTree = "<group>"; };
 		846D129B1EF3E62800567889 /* LKBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKBaseViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +74,27 @@
 		846D12A11EF3E67100567889 /* LKAttentionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKAttentionViewController.swift; sourceTree = "<group>"; };
 		846D12A31EF3E67C00567889 /* LKMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKMineViewController.swift; sourceTree = "<group>"; };
 		846D12A51EF3EACF00567889 /* LKNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKNavigationController.swift; sourceTree = "<group>"; };
+		8476760D1F024916005741BC /* LKTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTool.swift; sourceTree = "<group>"; };
 		84768DE01EF7573C0069AC47 /* LKTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTabBar.swift; sourceTree = "<group>"; };
+		84768DE21EF795D60069AC47 /* LKPublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKPublishViewController.swift; sourceTree = "<group>"; };
+		848FCA641EF9217000A33046 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		848FCA681EF9308000A33046 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		848FCA691EF9308000A33046 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		848FCA6A1EF9308000A33046 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		848FCA6B1EF9308000A33046 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		848FCA6C1EF9308000A33046 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		848FCA6D1EF9308000A33046 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		848FCA6E1EF9308000A33046 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		848FCA6F1EF9308000A33046 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		848FCA701EF9308000A33046 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		848FCA711EF9308000A33046 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		848FCA721EF9308000A33046 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		848FCA731EF9308000A33046 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		848FCA741EF9308000A33046 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		848FCA751EF9308000A33046 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		AC7C5A2A7B538437F066C257 /* Pods-LKBS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKBS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKBS/Pods-LKBS.release.xcconfig"; sourceTree = "<group>"; };
+		CD02BD959A659763D95EC634 /* Pods_LKBS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKBS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2201E2CD808E0D4DC4394CB /* Pods-LKBS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKBS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKBS/Pods-LKBS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED385B134BFF54C5698CA218 /* Pods_LKBS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B98A24E357100533CAA193D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2201E2CD808E0D4DC4394CB /* Pods-LKBS.debug.xcconfig */,
+				AC7C5A2A7B538437F066C257 /* Pods-LKBS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		846D12261EF3D39900567889 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +139,8 @@
 				846D12461EF3D39A00567889 /* LKBSTests */,
 				846D12511EF3D39A00567889 /* LKBSUITests */,
 				846D12301EF3D39900567889 /* Products */,
+				2B98A24E357100533CAA193D /* Pods */,
+				A103BE2E2431E2F1EE7EBA7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,10 +205,10 @@
 		846D12611EF3D73200567889 /* Attention(关注) */ = {
 			isa = PBXGroup;
 			children = (
-				846D12621EF3D73200567889 /* Models */,
 				846D12631EF3D73200567889 /* ViewControllers */,
-				846D12641EF3D73200567889 /* ViewModels */,
 				846D12651EF3D73200567889 /* Views */,
+				846D12641EF3D73200567889 /* ViewModels */,
+				846D12621EF3D73200567889 /* Models */,
 			);
 			path = "Attention(关注)";
 			sourceTree = "<group>";
@@ -252,10 +294,10 @@
 		846D126C1EF3D73200567889 /* Essence(精华) */ = {
 			isa = PBXGroup;
 			children = (
-				846D126D1EF3D73200567889 /* Models */,
 				846D126E1EF3D73200567889 /* ViewControllers */,
-				846D126F1EF3D73200567889 /* ViewModels */,
 				846D12701EF3D73200567889 /* Views */,
+				846D126F1EF3D73200567889 /* ViewModels */,
+				846D126D1EF3D73200567889 /* Models */,
 			);
 			path = "Essence(精华)";
 			sourceTree = "<group>";
@@ -292,10 +334,10 @@
 		846D12711EF3D73200567889 /* Firstnew(新帖) */ = {
 			isa = PBXGroup;
 			children = (
-				846D12721EF3D73200567889 /* Models */,
 				846D12731EF3D73200567889 /* ViewControllers */,
-				846D12741EF3D73200567889 /* ViewModels */,
 				846D12751EF3D73200567889 /* Views */,
+				846D12741EF3D73200567889 /* ViewModels */,
+				846D12721EF3D73200567889 /* Models */,
 			);
 			path = "Firstnew(新帖)";
 			sourceTree = "<group>";
@@ -332,6 +374,7 @@
 		846D12761EF3D73200567889 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				848FCA661EF9308000A33046 /* SDCycleScrollView */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -397,10 +440,10 @@
 		846D127E1EF3D73200567889 /* Mine(我) */ = {
 			isa = PBXGroup;
 			children = (
-				846D127F1EF3D73200567889 /* Models */,
 				846D12801EF3D73200567889 /* ViewControllers */,
-				846D12811EF3D73200567889 /* ViewModels */,
 				846D12821EF3D73200567889 /* Views */,
+				846D12811EF3D73200567889 /* ViewModels */,
+				846D127F1EF3D73200567889 /* Models */,
 			);
 			path = "Mine(我)";
 			sourceTree = "<group>";
@@ -438,7 +481,8 @@
 			isa = PBXGroup;
 			children = (
 				846D12841EF3D73200567889 /* AppDelegate.swift */,
-				846D128F1EF3DE7A00567889 /* Comment.swift */,
+				848FCA641EF9217000A33046 /* Comment.swift */,
+				845EA73D1EFA5143008E1415 /* LKBS-Bridging-Header.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -446,10 +490,10 @@
 		846D12851EF3D73200567889 /* Publish(发帖) */ = {
 			isa = PBXGroup;
 			children = (
-				846D12861EF3D73200567889 /* Models */,
 				846D12871EF3D73200567889 /* ViewControllers */,
-				846D12881EF3D73200567889 /* ViewModels */,
 				846D12891EF3D73200567889 /* Views */,
+				846D12881EF3D73200567889 /* ViewModels */,
+				846D12861EF3D73200567889 /* Models */,
 			);
 			path = "Publish(发帖)";
 			sourceTree = "<group>";
@@ -464,6 +508,7 @@
 		846D12871EF3D73200567889 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84768DE21EF795D60069AC47 /* LKPublishViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -492,8 +537,46 @@
 		846D128B1EF3D73200567889 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8476760D1F024916005741BC /* LKTool.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		848FCA661EF9308000A33046 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				848FCA671EF9308000A33046 /* PageControl */,
+				848FCA701EF9308000A33046 /* SDCollectionViewCell.h */,
+				848FCA711EF9308000A33046 /* SDCollectionViewCell.m */,
+				848FCA721EF9308000A33046 /* SDCycleScrollView.h */,
+				848FCA731EF9308000A33046 /* SDCycleScrollView.m */,
+				848FCA741EF9308000A33046 /* UIView+SDExtension.h */,
+				848FCA751EF9308000A33046 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		848FCA671EF9308000A33046 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				848FCA681EF9308000A33046 /* TAAbstractDotView.h */,
+				848FCA691EF9308000A33046 /* TAAbstractDotView.m */,
+				848FCA6A1EF9308000A33046 /* TAAnimatedDotView.h */,
+				848FCA6B1EF9308000A33046 /* TAAnimatedDotView.m */,
+				848FCA6C1EF9308000A33046 /* TADotView.h */,
+				848FCA6D1EF9308000A33046 /* TADotView.m */,
+				848FCA6E1EF9308000A33046 /* TAPageControl.h */,
+				848FCA6F1EF9308000A33046 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		A103BE2E2431E2F1EE7EBA7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD02BD959A659763D95EC634 /* Pods_LKBS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,9 +586,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846D12571EF3D39A00567889 /* Build configuration list for PBXNativeTarget "LKBS" */;
 			buildPhases = (
+				3B68BF3101419EE3139878A6 /* [CP] Check Pods Manifest.lock */,
 				846D122B1EF3D39900567889 /* Sources */,
 				846D122C1EF3D39900567889 /* Frameworks */,
 				846D122D1EF3D39900567889 /* Resources */,
+				4021523CB045062876484880 /* [CP] Embed Pods Frameworks */,
+				FD649114871BD4C1AB4CA761 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -628,6 +714,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B68BF3101419EE3139878A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4021523CB045062876484880 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LKBS/Pods-LKBS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD649114871BD4C1AB4CA761 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LKBS/Pods-LKBS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		846D122B1EF3D39900567889 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -636,15 +770,24 @@
 				84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */,
 				846D128E1EF3D8D400567889 /* LKTabbarController.swift in Sources */,
 				846D12A01EF3E65500567889 /* LKFirstnewViewController.swift in Sources */,
-				846D12901EF3DE7A00567889 /* Comment.swift in Sources */,
+				848FCA7C1EF9308000A33046 /* UIView+SDExtension.m in Sources */,
+				848FCA761EF9308000A33046 /* TAAbstractDotView.m in Sources */,
 				846D128C1EF3D73200567889 /* AppDelegate.swift in Sources */,
 				846D12A61EF3EACF00567889 /* LKNavigationController.swift in Sources */,
 				846D12A41EF3E67C00567889 /* LKMineViewController.swift in Sources */,
+				848FCA7B1EF9308000A33046 /* SDCycleScrollView.m in Sources */,
 				846D12A21EF3E67100567889 /* LKAttentionViewController.swift in Sources */,
+				848FCA771EF9308000A33046 /* TAAnimatedDotView.m in Sources */,
 				846D129E1EF3E63400567889 /* LKEssenceViewController.swift in Sources */,
+				84768DE31EF795D60069AC47 /* LKPublishViewController.swift in Sources */,
+				848FCA791EF9308000A33046 /* TAPageControl.m in Sources */,
 				846D12941EF3DF5E00567889 /* UI+Extension.swift in Sources */,
+				848FCA651EF9217000A33046 /* Comment.swift in Sources */,
+				848FCA781EF9308000A33046 /* TADotView.m in Sources */,
+				8476760E1F024916005741BC /* LKTool.swift in Sources */,
 				846D129C1EF3E62800567889 /* LKBaseViewController.swift in Sources */,
 				846D12921EF3DF1600567889 /* Frame+Extension.swift in Sources */,
+				848FCA7A1EF9308000A33046 /* SDCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +929,7 @@
 		};
 		846D12581EF3D39A00567889 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2201E2CD808E0D4DC4394CB /* Pods-LKBS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9N5X54645B;
@@ -794,12 +938,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziding.LKBS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/BaiSiBuDeQiJie/LKBS/LKBS/Classes/Other/LKBS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		846D12591EF3D39A00567889 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC7C5A2A7B538437F066C257 /* Pods-LKBS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9N5X54645B;
@@ -808,6 +954,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziding.LKBS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/BaiSiBuDeQiJie/LKBS/LKBS/Classes/Other/LKBS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

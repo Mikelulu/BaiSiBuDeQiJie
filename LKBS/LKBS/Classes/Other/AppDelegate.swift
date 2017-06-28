@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.frame = UIScreen.main.bounds
         window?.rootViewController = LKTabbarController()
         window?.makeKeyAndVisible()
+
+        UIApplication.shared.statusBarStyle = .lightContent
 
         return true
     }

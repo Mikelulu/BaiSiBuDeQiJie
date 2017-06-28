@@ -15,6 +15,8 @@ class LKEssenceViewController: LKBaseViewController {
 
 
         self.navigationItem.title = "首页"
+
+        self.view.backgroundColor = UIColor.red
     }
 
     override func didReceiveMemoryWarning() {

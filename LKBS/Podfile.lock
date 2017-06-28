@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.4.0)
+  - HandyJSON (1.7.1)
+  - Kingfisher (3.10.1)
+  - MJRefresh (3.1.12)
+  - pop (1.0.9)
+  - SnapKit (3.2.0)
+  - SVProgressHUD (2.1.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - HandyJSON
+  - Kingfisher
+  - MJRefresh
+  - pop
+  - SnapKit
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  HandyJSON: 54b6ce942795f7b2e61b82fe73cf25d9f139d125
+  Kingfisher: 33a1b82140fcb14a9fc13f78dfde2a03ff8de8cb
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+
+PODFILE CHECKSUM: 28be924640ef442969a725e61bba4c8d230bddc6
+
+COCOAPODS: 1.2.0

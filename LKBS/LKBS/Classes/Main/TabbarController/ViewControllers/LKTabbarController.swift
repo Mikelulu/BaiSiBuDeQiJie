@@ -80,9 +80,7 @@ extension LKTabbarController {
 
         self.tabBar.backgroundImage = UIImage.init(named: "tabbar-light")
 
-        ///  利用KVC把readonly权限改过来
+        /// 利用KVC把readonly权限改过来
         self.setValue(LKTabBar(), forKey: "tabBar")
      }
-
-
 }

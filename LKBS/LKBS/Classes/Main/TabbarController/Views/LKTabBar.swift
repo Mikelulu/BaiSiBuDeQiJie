@@ -45,7 +45,7 @@ class LKTabBar: UITabBar {
 
         for view: UIView in self.subviews {
 
-            LKLog(view)
+//            LKLog(view)
             /**
              UITabBarButton 私有变量 ，知道了UITabBarButton之后
              
@@ -73,15 +73,20 @@ class LKTabBar: UITabBar {
 
         /// 设置中间按钮的位置
         plusBtn.center = CGPoint.init(x: self.bounds.size.width * 0.5, y: self.bounds.height * 0.5)
-        
     }
 }
 
 // MARK: - 事件处理
 extension LKTabBar {
 
+
     @objc fileprivate func plusBtnClick(_ btn: UIButton) {
 
         LKLog("点击了中间按钮")
+
+        let publicVC = LKPublishViewController()
+
+        UIApplication.shared.keyWindow?.rootViewController?.present(publicVC, animated: true, completion: nil)
+        
     }
 }

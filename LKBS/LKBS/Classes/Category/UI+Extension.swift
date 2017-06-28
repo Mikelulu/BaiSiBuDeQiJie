@@ -53,14 +53,19 @@ extension String {
 
 
 /// 图片在上 文字在下
-class LKButton: UIButton {
+class LKTopButton: UIButton {
+
+    ///
+    let fonsize: CGFloat = 13
+    let titleColor: UIColor = UIColor.gray
+    let margin: CGFloat = 0
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         titleLabel?.textAlignment = .center
-        titleLabel?.font = UIFont.systemFont(ofSize: 11.0)
-        self.setTitleColor(UIColor.gray, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: fonsize)
+        self.setTitleColor(titleColor, for: .normal)
     }
 
     override func layoutSubviews() {
@@ -76,11 +81,11 @@ class LKButton: UIButton {
         titleLabel?.width = self.width
         titleLabel?.height = self.height - (imageView?.height)!
         titleLabel?.x = 0
-        titleLabel?.y = (imageView?.height)!
+        titleLabel?.y = (imageView?.height)! + margin
 
-        imageView?.layer.cornerRadius = (imageView?.width)! / 2
-        imageView?.layer.masksToBounds = true
-        imageView?.backgroundColor = UIColor.red
+//        imageView?.layer.cornerRadius = (imageView?.width)! / 2
+//        imageView?.layer.masksToBounds = true
+//        imageView?.backgroundColor = UIColor.red
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -91,12 +96,17 @@ class LKButton: UIButton {
 /// 图片在you 文字在zuo
 class LKRightButton: UIButton {
 
+    let fonsize: CGFloat = 13
+    let titleColor: UIColor = UIColor.gray
+    let margin: CGFloat = 0
+
+
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         titleLabel?.textAlignment = .right
-        titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
-        self.setTitleColor(UIColor.gray, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: fonsize)
+        self.setTitleColor(titleColor, for: .normal)
     }
 
     override func layoutSubviews() {
@@ -107,7 +117,7 @@ class LKRightButton: UIButton {
         self.titleLabel?.y = 0;
         self.titleLabel?.height = self.height;
 
-        self.imageView?.x = (self.titleLabel?.width)!;
+        self.imageView?.x = (self.titleLabel?.width)! + margin;
         self.imageView?.y = 0;
         self.imageView?.width = self.width - (self.imageView?.x)!;
         self.imageView?.height = self.height;
@@ -255,5 +265,25 @@ extension UIImage {
         let image = UIImage.init(named: imageName)
         
         return (image?.stretchableImage(withLeftCapWidth: Int((image?.size.width)! * 0.5), topCapHeight: Int((image?.size.height)! * 0.5)))!
+    }
+
+    /// 截图功能，根据尺寸截取view成为一张图片
+    ///
+    /// - Parameters:
+    ///   - view: 需要截取的View
+    ///   - rect: 需要截取的区域
+    /// - Returns: 新生成的已截取的图片
+    public class func imageWithSnapshot(view: UIView, rect: CGRect) -> UIImage{
+
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
+
+        /// 把控件上的图层渲染到上下文,layer只能渲染   (wkwebView 需要使用 view.drawHierarchy(in: rect, afterScreenUpdates: true))
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+
+        UIGraphicsEndImageContext()
+
+        return image!
     }
 }
