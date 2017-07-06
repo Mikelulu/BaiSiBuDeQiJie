@@ -37,7 +37,7 @@ struct ListModel: HandyJSON {
 
     var u: UModel?
     var passtime: String?
-    var video: VideoModel?
+//    var video: VideoModel?
 
     var type: String? // audio image video gif text
     var id: Int?
@@ -68,16 +68,16 @@ struct UModel: HandyJSON {
     var name: String?
 }
 
-struct VideoModel: HandyJSON {
-
-    var playfcount: Int?
-    var height: CGFloat?
-    var width: CGFloat?
-    var video: [String]?
-    var download: [String]?
-    var duration: CGFloat?
-    var playcount: Int?
-    var thumbnail: [String]?
-    var thumbnail_small: [String]?
-
-}
+//struct VideoModel: HandyJSON {
+//
+//    var playfcount: Int?
+//    var height: CGFloat?
+//    var width: CGFloat?
+//    var video: [String]?
+//    var download: [String]?
+//    var duration: CGFloat?
+//    var playcount: Int?
+//    var thumbnail: [String]?
+//    var thumbnail_small: [String]?
+//
+//}
