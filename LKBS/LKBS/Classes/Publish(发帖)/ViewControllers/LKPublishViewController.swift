@@ -44,7 +44,7 @@ class LKPublishViewController: LKBaseViewController {
     }
 
     deinit {
-        LKLog(NSStringFromClass(type(of: self)) + "释放了")
+        kDealloc(self)
     }
 }
 
@@ -97,7 +97,7 @@ extension LKPublishViewController  {
                 springAni.beginTime = CACurrentMediaTime() + CFTimeInterval(index) * animationDelay
                 springAni.springBounciness = springBounciness
 
-                btn.layer.pop_add(springAni, forKey: "btn");
+                btn.pop_add(springAni, forKey: "btn");
 
             }
         }
@@ -108,14 +108,12 @@ extension LKPublishViewController  {
         self.topImageV.centerX = self.view.centerX
         view.addSubview(self.topImageV)
 
-        /// 添加动画
 
         /// 1. 创建动画
-
         if let baseAnimation = POPSpringAnimation.init(propertyNamed: kPOPLayerPositionY) {
 
             baseAnimation.fromValue = kScreenH * 0.15 - kScreenH
-            baseAnimation.toValue = 100
+            baseAnimation.toValue = kScreenH * 0.15
             baseAnimation.beginTime = CACurrentMediaTime() + CFTimeInterval(self.imags.count) * animationDelay
             baseAnimation.springBounciness = springBounciness
             self.topImageV.layer.pop_add(baseAnimation, forKey: "position")

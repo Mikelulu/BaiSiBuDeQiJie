@@ -22,6 +22,70 @@ extension UIColor {
                        alpha: 1.0)
     }
 
+    class func randomColor() -> UIColor{
+        return UIColor(red: CGFloat(arc4random_uniform(255))/255.0, green: CGFloat(arc4random_uniform(255))/255.0, blue: CGFloat(arc4random_uniform(255))/255.0, alpha: 1.0)
+    }
+
+    class func random() -> UIColor{
+        return UIColor.randomColor()
+    }
+
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1.0) {
+        self.init(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: alpha)
+    }
+
+    convenience init(c: CGFloat,  alpha: CGFloat = 1.0) {
+        self.init(red: c/255.0, green: c/255.0, blue: c/255.0, alpha: alpha)
+    }
+
+    convenience init?(hex:String) {
+        guard hex.characters.count>=6 else {
+            return nil
+        }
+
+        var hexTemp = hex.uppercased()
+        if hexTemp.hasPrefix("0X") || hexTemp.hasPrefix("##"){
+            hexTemp = (hexTemp as NSString).substring(from: 2)
+        }
+
+        if hexTemp.hasPrefix("#"){
+            hexTemp = (hexTemp as NSString).substring(from: 1)
+        }
+
+        var range = NSRange(location: 0, length: 2)
+        let rHex = (hexTemp as NSString).substring(with: range)
+        range.location = 2
+        let gHex = (hexTemp as NSString).substring(with: range)
+        range.location = 4
+        let bHex = (hexTemp as NSString).substring(with: range)
+
+        var r : UInt32 = 0
+        var g : UInt32 = 0
+        var b : UInt32 = 0
+
+        Scanner(string: rHex).scanHexInt32(&r)
+        Scanner(string: gHex).scanHexInt32(&g)
+        Scanner(string: bHex).scanHexInt32(&b)
+
+        self.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
+    }
+
+    func getRGB() -> (CGFloat,CGFloat,CGFloat) {
+        var r : CGFloat = 0
+        var g : CGFloat = 0
+        var b : CGFloat = 0
+
+        if self.getRed(&r, green: &g, blue: &b, alpha: nil){
+            return (r * 255,g * 255,b * 255)
+        }
+
+        guard let cmps = cgColor.components else {
+            //            throw
+            fatalError("请使用RGB创建UIColor")
+        }
+        return(cmps[0] * 255,cmps[1] * 255,cmps[2] * 255)
+    }
+
 }
 
 // MARK: - String的分类（结构体类型）
@@ -133,6 +197,14 @@ class LKRightButton: UIButton {
 extension UIBarButtonItem {
 
 
+    /// 快速设置barbuttonItem （图片）
+    ///
+    /// - Parameters:
+    ///   - icon: 正常状态图片名字
+    ///   - heightIcon: 高亮状态图片名字
+    ///   - target: <#target description#>
+    ///   - action: <#action description#>
+    /// - Returns: barbuttonItem
     public class func item(icon: String,heightIcon: String?,target: Any,action: Selector?) -> UIBarButtonItem {
 
         let btn: UIButton = UIButton()
@@ -143,6 +215,31 @@ extension UIBarButtonItem {
         }
 
         btn.frame = CGRect(x: 0, y: 0, width: (btn.currentBackgroundImage?.size.width)!, height: (btn.currentBackgroundImage?.size.height)!)
+
+        if (action != nil) {
+
+            btn.addTarget(target, action: action!, for: .touchUpInside)
+        }
+
+        return UIBarButtonItem(customView: btn)
+    }
+
+    public class func backItem(icon: String,heightIcon: String?,target: Any,action: Selector?, title: String) -> UIBarButtonItem {
+
+        let btn: UIButton = UIButton()
+        btn.setImage(UIImage.init(named: icon), for: .normal)
+        if (heightIcon != nil) {
+            btn.setImage(UIImage.init(named: heightIcon!), for: .highlighted)
+        }
+
+        btn.setTitle(title, for: .normal)
+        btn.setTitleColor(RGB(249, 173, 184), for: .normal)
+        btn.setTitleColor(RGB(249, 173, 184), for: .highlighted)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+
+        btn.sizeToFit()
+
+        btn.contentEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0)
 
         if (action != nil) {
 
@@ -215,13 +312,13 @@ extension UIImage {
     ///
     /// - Parameter color: 要生成的图片颜色
     /// - Returns:
-    public func createImageWithColor(_ color: UIColor) -> UIImage {
+    public class func createImageWithColor(_ color: UIColor, _ size: CGSize) -> UIImage {
 
-        UIGraphicsBeginImageContextWithOptions(self.size, false, 0)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
 
         color.set()
 
-        UIRectFill(CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        UIRectFill(CGRect.init(x: 0, y: 0, width: size.width, height: size.height))
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
 

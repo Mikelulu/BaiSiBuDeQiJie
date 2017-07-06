@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845467611F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */; };
+		845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */; };
+		845467661F0E0F6E009DEFA1 /* LKRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */; };
+		845467681F0E167C009DEFA1 /* LKWalkmanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467671F0E167C009DEFA1 /* LKWalkmanController.swift */; };
+		845467E21F0E2B33009DEFA1 /* LKEssenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467E11F0E2B33009DEFA1 /* LKEssenceModel.swift */; };
+		8461933D1F0CBC66008F5309 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461933C1F0CBC66008F5309 /* API.swift */; };
+		846193401F0CE306008F5309 /* LKPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461933F1F0CE306008F5309 /* LKPageStyle.swift */; };
+		846193421F0CE3AD008F5309 /* LKPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846193411F0CE3AD008F5309 /* LKPageView.swift */; };
+		846193441F0CE435008F5309 /* LKTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846193431F0CE435008F5309 /* LKTitleView.swift */; };
+		846193461F0CE499008F5309 /* LKContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846193451F0CE499008F5309 /* LKContentView.swift */; };
 		846D123A1EF3D39900567889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846D12391EF3D39900567889 /* Assets.xcassets */; };
 		846D123D1EF3D39900567889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D123B1EF3D39900567889 /* LaunchScreen.storyboard */; };
 		846D12481EF3D39A00567889 /* LKBSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D12471EF3D39A00567889 /* LKBSTests.swift */; };
@@ -53,7 +63,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKBaseTopicViewController.swift; sourceTree = "<group>"; };
+		845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKNetworkManager.swift; sourceTree = "<group>"; };
+		845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRecommendController.swift; sourceTree = "<group>"; };
+		845467671F0E167C009DEFA1 /* LKWalkmanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKWalkmanController.swift; sourceTree = "<group>"; };
+		845467E11F0E2B33009DEFA1 /* LKEssenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKEssenceModel.swift; sourceTree = "<group>"; };
 		845EA73D1EFA5143008E1415 /* LKBS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LKBS-Bridging-Header.h"; sourceTree = "<group>"; };
+		8461933C1F0CBC66008F5309 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8461933F1F0CE306008F5309 /* LKPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKPageStyle.swift; sourceTree = "<group>"; };
+		846193411F0CE3AD008F5309 /* LKPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKPageView.swift; sourceTree = "<group>"; };
+		846193431F0CE435008F5309 /* LKTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTitleView.swift; sourceTree = "<group>"; };
+		846193451F0CE499008F5309 /* LKContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKContentView.swift; sourceTree = "<group>"; };
 		846D122F1EF3D39900567889 /* LKBS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LKBS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846D12391EF3D39900567889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846D123C1EF3D39900567889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,6 +150,26 @@
 				AC7C5A2A7B538437F066C257 /* Pods-LKBS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		845467641F0E0F47009DEFA1 /* TopicLIst */ = {
+			isa = PBXGroup;
+			children = (
+				845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */,
+				845467671F0E167C009DEFA1 /* LKWalkmanController.swift */,
+			);
+			path = TopicLIst;
+			sourceTree = "<group>";
+		};
+		8461933E1F0CE2D8008F5309 /* LKPageView */ = {
+			isa = PBXGroup;
+			children = (
+				8461933F1F0CE306008F5309 /* LKPageStyle.swift */,
+				846193411F0CE3AD008F5309 /* LKPageView.swift */,
+				846193431F0CE435008F5309 /* LKTitleView.swift */,
+				846193451F0CE499008F5309 /* LKContentView.swift */,
+			);
+			path = LKPageView;
 			sourceTree = "<group>";
 		};
 		846D12261EF3D39900567889 = {
@@ -305,6 +345,7 @@
 		846D126D1EF3D73200567889 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				845467E11F0E2B33009DEFA1 /* LKEssenceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				846D129D1EF3E63400567889 /* LKEssenceViewController.swift */,
+				845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */,
+				845467641F0E0F47009DEFA1 /* TopicLIst */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -374,6 +417,7 @@
 		846D12761EF3D73200567889 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				8461933E1F0CE2D8008F5309 /* LKPageView */,
 				848FCA661EF9308000A33046 /* SDCycleScrollView */,
 			);
 			path = Libs;
@@ -482,6 +526,7 @@
 			children = (
 				846D12841EF3D73200567889 /* AppDelegate.swift */,
 				848FCA641EF9217000A33046 /* Comment.swift */,
+				8461933C1F0CBC66008F5309 /* API.swift */,
 				845EA73D1EFA5143008E1415 /* LKBS-Bridging-Header.h */,
 			);
 			path = Other;
@@ -538,6 +583,7 @@
 			isa = PBXGroup;
 			children = (
 				8476760D1F024916005741BC /* LKTool.swift */,
+				845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -767,26 +813,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8461933D1F0CBC66008F5309 /* API.swift in Sources */,
 				84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */,
+				846193421F0CE3AD008F5309 /* LKPageView.swift in Sources */,
 				846D128E1EF3D8D400567889 /* LKTabbarController.swift in Sources */,
+				845467E21F0E2B33009DEFA1 /* LKEssenceModel.swift in Sources */,
 				846D12A01EF3E65500567889 /* LKFirstnewViewController.swift in Sources */,
 				848FCA7C1EF9308000A33046 /* UIView+SDExtension.m in Sources */,
 				848FCA761EF9308000A33046 /* TAAbstractDotView.m in Sources */,
 				846D128C1EF3D73200567889 /* AppDelegate.swift in Sources */,
 				846D12A61EF3EACF00567889 /* LKNavigationController.swift in Sources */,
+				845467611F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift in Sources */,
 				846D12A41EF3E67C00567889 /* LKMineViewController.swift in Sources */,
+				845467661F0E0F6E009DEFA1 /* LKRecommendController.swift in Sources */,
 				848FCA7B1EF9308000A33046 /* SDCycleScrollView.m in Sources */,
+				846193461F0CE499008F5309 /* LKContentView.swift in Sources */,
 				846D12A21EF3E67100567889 /* LKAttentionViewController.swift in Sources */,
 				848FCA771EF9308000A33046 /* TAAnimatedDotView.m in Sources */,
 				846D129E1EF3E63400567889 /* LKEssenceViewController.swift in Sources */,
 				84768DE31EF795D60069AC47 /* LKPublishViewController.swift in Sources */,
+				846193441F0CE435008F5309 /* LKTitleView.swift in Sources */,
 				848FCA791EF9308000A33046 /* TAPageControl.m in Sources */,
+				846193401F0CE306008F5309 /* LKPageStyle.swift in Sources */,
 				846D12941EF3DF5E00567889 /* UI+Extension.swift in Sources */,
+				845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */,
 				848FCA651EF9217000A33046 /* Comment.swift in Sources */,
 				848FCA781EF9308000A33046 /* TADotView.m in Sources */,
 				8476760E1F024916005741BC /* LKTool.swift in Sources */,
 				846D129C1EF3E62800567889 /* LKBaseViewController.swift in Sources */,
 				846D12921EF3DF1600567889 /* Frame+Extension.swift in Sources */,
+				845467681F0E167C009DEFA1 /* LKWalkmanController.swift in Sources */,
 				848FCA7A1EF9308000A33046 /* SDCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -932,6 +988,7 @@
 			baseConfigurationReference = E2201E2CD808E0D4DC4394CB /* Pods-LKBS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9N5X54645B;
 				INFOPLIST_FILE = LKBS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -948,6 +1005,7 @@
 			baseConfigurationReference = AC7C5A2A7B538437F066C257 /* Pods-LKBS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9N5X54645B;
 				INFOPLIST_FILE = LKBS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        /// 两秒后启动app
+//        Thread.sleep(until: 2)
+
         window = UIWindow()
         window?.backgroundColor = UIColor.white
         window?.frame = UIScreen.main.bounds

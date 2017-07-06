@@ -52,13 +52,16 @@ func RGB (_ r:CGFloat, _ g:CGFloat, _ b:CGFloat) -> UIColor {
 
 
 //主题颜色 字体 等
+/// 界面背景颜色
 let kBgColor = UIColor.hexInt(0xf5f5f5)
 
 let kSelectColor = RGBA(252, 49, 89, 0.9)
 
 let kNormalColor = UIColor.hexInt(0x666666)
 
-let kBlackColor = UIColor.hexInt(0x333333)
+
+/// 导航栏颜色
+let kNavTinColor = RGB(252, 49, 89).withAlphaComponent(0.9)
 
 
 let kMargin: CGFloat = 10
@@ -84,7 +87,7 @@ let kIphoneP = kIsIphon && (kScreenH == 736 || kScreenW == 736)
 
 /// 析构
 func kDealloc<T>(_ type: T) {
-    LKLog(NSStringFromClass(type(of: type) as! AnyClass))
+    LKLog(NSStringFromClass(type(of: type) as! AnyClass) + "释放了")
 }
 // MARK:- 自定义打印方法
 func LKLog<T>(_ message : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
