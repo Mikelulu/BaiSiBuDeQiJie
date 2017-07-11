@@ -17,6 +17,11 @@ class LKEssenceViewController: LKBaseViewController {
     fileprivate let childVCs = [LKRecommendController(), LKWalkmanController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController()]
 
 
+    override var shouldAutomaticallyForwardAppearanceMethods: Bool {
+        get {
+            return false
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +30,9 @@ class LKEssenceViewController: LKBaseViewController {
         setUpViews()
     }
 
+    deinit {
+        kDealloc(self)
+    }
 }
 
 // MARK: - UI
@@ -41,15 +49,40 @@ extension LKEssenceViewController {
     }
     fileprivate func setUpViews() {
 
-        var pageStyle = LKPageStyle()
-        /// 可以滚动
-        pageStyle.isScrollEnable = true
-        /// 设置缩放
-        pageStyle.isNeedTitleScale = true
+        let segmentStyle = ZJSegmentStyle()
+        /// 显示遮罩
+        segmentStyle.isShowCover = true
+        /// 关闭弹性
+        segmentStyle.isSegmentViewBounces = false
+        /// 颜色渐变
+        segmentStyle.isGradualChangeTitleColor = true
 
-        let pageView: LKPageView = LKPageView.init(frame: CGRect.init(x: 0, y: 64, width: kScreenW, height: kScreenH - 64 - 49), titles: titles, titleStyle: pageStyle, childVCs: childVCs, parentVC: self)
+
+        let pageView: ZJScrollPageView = ZJScrollPageView.init(frame: CGRect.init(x: 0, y: 64, width: kScreenW, height: kScreenH - 64 - 49), segmentStyle: segmentStyle, titles: titles, parentViewController: self, delegate: self)
 
         self.view.addSubview(pageView)
+    }
+}
+
+// MARK: - ZJScrollPageViewDelegate
+extension LKEssenceViewController: ZJScrollPageViewDelegate {
+
+    func numberOfChildViewControllers() -> Int {
+
+        return self.titles.count
+    }
+
+    func childViewController(_ reuseViewController: UIViewController!, for index: Int) -> UIViewController! {
+
+        LKLog(index)
+
+        var childVC = reuseViewController
+
+        if childVC == nil {
+            childVC = LKRecommendController()
+        }
+
+        return childVC
     }
 }
 // MARK: - 事件处理

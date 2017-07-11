@@ -14,7 +14,8 @@
 #import <UIKit/UIKit.h>
 
 #import "SDCycleScrollView.h"
-
+#import "ZJScrollPageView.h"
+#import "ZJScrollSegmentView.h"
 
 
 #endif /* LKBS_Bridging_Header_h */

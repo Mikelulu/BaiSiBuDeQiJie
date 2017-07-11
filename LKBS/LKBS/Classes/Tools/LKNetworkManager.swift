@@ -21,6 +21,8 @@ class LKNetworkManager: NSObject {
 
         Alamofire.request(urlString, method: method, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString { (dataResponse) in
 
+            SVProgressHUD.dismiss()
+
             if dataResponse.result.isSuccess {
 
                 if let jsonString = dataResponse.result.value {
@@ -31,6 +33,8 @@ class LKNetworkManager: NSObject {
             }else {
 
                 finished(nil, dataResponse.result.error)
+
+                LKLog(dataResponse.result.error)
 
                 if (dataResponse.result.error! as NSError).code == -1001 {
 

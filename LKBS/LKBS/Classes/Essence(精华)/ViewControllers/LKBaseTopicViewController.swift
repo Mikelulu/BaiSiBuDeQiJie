@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import SVProgressHUD
+import ObjectMapper
+import MJRefresh
 
 class LKBaseTopicViewController: LKBaseViewController {
+
+    /// 加载页数
+    fileprivate var page: Int = 0
+
+    /// 数据源
+    fileprivate var dataSource = [ListModel]()
 
     /// 请求url
     public var urlString: String = "" {
 
         didSet {
             /// 进行网络请求
-            let url: String = String.init(format: urlString, 0)
-            LKLog(url)
-            getData(url, page: 0, isLoadMore: false)
+            self.tableView.mj_header.beginRefreshing()
         }
     }
     /// 是否有banner
@@ -65,6 +72,7 @@ class LKBaseTopicViewController: LKBaseViewController {
         return table
     }()
 
+    // MARK: - liftStyle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -73,6 +81,20 @@ class LKBaseTopicViewController: LKBaseViewController {
 
         view.addSubview(self.tableView)
 
+        /// 添加下拉刷新
+        self.tableView.mj_header = MJRefreshHeader.init(refreshingBlock: { [unowned self] in
+            let url: String = String.init(format: self.urlString, 0)
+            LKLog("请求的url为:" + url)
+            self.getData(url, isLoadMore: false)
+        })
+
+        /// 添加上拉加载更多
+        self.tableView.mj_footer = MJRefreshAutoFooter.init(refreshingBlock: { [unowned self] in
+
+            let url: String = String.init(format: self.urlString, self.page + 1)
+            LKLog("请求的url为:" + url)
+            self.getData(url, isLoadMore: true)
+        })
     }
 
 }
@@ -80,14 +102,36 @@ class LKBaseTopicViewController: LKBaseViewController {
 // MARK: - Network
 extension LKBaseTopicViewController {
 
-    fileprivate func getData(_ url: String, page: Int, isLoadMore: Bool) {
+    fileprivate func getData(_ url: String, isLoadMore: Bool) {
+
+//        SVProgressHUD.show()
 
         LKNetworkManager.shareInstance.request(url, method: .get) { (responseString, error) in
+
+            if !isLoadMore {
+                self.dataSource.removeAll()
+            }
 
             if let jsonString = responseString {
 
                 LKLog(jsonString)
+
+                if let responseModel = ResponseModel(JSONString: jsonString) {
+
+                    if (responseModel.list != nil){
+
+                        for model in responseModel.list! {
+
+                            self.dataSource.append(model)
+                        }
+                    }
+                }
             }
+
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+
+            self.tableView.reloadData()
         }
     }
 }
@@ -99,7 +143,7 @@ extension LKBaseTopicViewController: UITableViewDelegate, UITableViewDataSource 
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.dataSource.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 

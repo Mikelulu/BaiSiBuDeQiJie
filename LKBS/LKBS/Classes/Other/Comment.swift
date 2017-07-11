@@ -12,6 +12,7 @@ import Alamofire
 import SnapKit
 import Kingfisher
 import HandyJSON
+import ObjectMapper
 
 import MJRefresh
 import SVProgressHUD

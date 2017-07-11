@@ -11,6 +11,7 @@ target 'LKBS' do
   pod 'Kingfisher'
   pod 'SnapKit' 
   pod 'HandyJSON'
+  pod 'ObjectMapper'
 
 
   pod 'MJRefresh'

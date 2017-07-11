@@ -12,6 +12,14 @@
 		845467661F0E0F6E009DEFA1 /* LKRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */; };
 		845467681F0E167C009DEFA1 /* LKWalkmanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467671F0E167C009DEFA1 /* LKWalkmanController.swift */; };
 		845467E21F0E2B33009DEFA1 /* LKEssenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467E11F0E2B33009DEFA1 /* LKEssenceModel.swift */; };
+		8460650B1F14D827000315EC /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 846064FB1F14D827000315EC /* UIView+ZJFrame.m */; };
+		8460650C1F14D827000315EC /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846064FD1F14D827000315EC /* UIViewController+ZJScrollPageController.m */; };
+		8460650D1F14D827000315EC /* ZJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846064FF1F14D827000315EC /* ZJCollectionView.m */; };
+		8460650E1F14D827000315EC /* ZJContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846065011F14D827000315EC /* ZJContentView.m */; };
+		8460650F1F14D827000315EC /* ZJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846065031F14D827000315EC /* ZJScrollPageView.m */; };
+		846065101F14D827000315EC /* ZJScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846065061F14D827000315EC /* ZJScrollSegmentView.m */; };
+		846065111F14D827000315EC /* ZJSegmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 846065081F14D827000315EC /* ZJSegmentStyle.m */; };
+		846065121F14D827000315EC /* ZJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460650A1F14D827000315EC /* ZJTitleView.m */; };
 		8461933D1F0CBC66008F5309 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461933C1F0CBC66008F5309 /* API.swift */; };
 		846193401F0CE306008F5309 /* LKPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461933F1F0CE306008F5309 /* LKPageStyle.swift */; };
 		846193421F0CE3AD008F5309 /* LKPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846193411F0CE3AD008F5309 /* LKPageView.swift */; };
@@ -69,6 +77,23 @@
 		845467671F0E167C009DEFA1 /* LKWalkmanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKWalkmanController.swift; sourceTree = "<group>"; };
 		845467E11F0E2B33009DEFA1 /* LKEssenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKEssenceModel.swift; sourceTree = "<group>"; };
 		845EA73D1EFA5143008E1415 /* LKBS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LKBS-Bridging-Header.h"; sourceTree = "<group>"; };
+		846064FA1F14D827000315EC /* UIView+ZJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJFrame.h"; sourceTree = "<group>"; };
+		846064FB1F14D827000315EC /* UIView+ZJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJFrame.m"; sourceTree = "<group>"; };
+		846064FC1F14D827000315EC /* UIViewController+ZJScrollPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZJScrollPageController.h"; sourceTree = "<group>"; };
+		846064FD1F14D827000315EC /* UIViewController+ZJScrollPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZJScrollPageController.m"; sourceTree = "<group>"; };
+		846064FE1F14D827000315EC /* ZJCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCollectionView.h; sourceTree = "<group>"; };
+		846064FF1F14D827000315EC /* ZJCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCollectionView.m; sourceTree = "<group>"; };
+		846065001F14D827000315EC /* ZJContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJContentView.h; sourceTree = "<group>"; };
+		846065011F14D827000315EC /* ZJContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJContentView.m; sourceTree = "<group>"; };
+		846065021F14D827000315EC /* ZJScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageView.h; sourceTree = "<group>"; };
+		846065031F14D827000315EC /* ZJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollPageView.m; sourceTree = "<group>"; };
+		846065041F14D827000315EC /* ZJScrollPageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageViewDelegate.h; sourceTree = "<group>"; };
+		846065051F14D827000315EC /* ZJScrollSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollSegmentView.h; sourceTree = "<group>"; };
+		846065061F14D827000315EC /* ZJScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollSegmentView.m; sourceTree = "<group>"; };
+		846065071F14D827000315EC /* ZJSegmentStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSegmentStyle.h; sourceTree = "<group>"; };
+		846065081F14D827000315EC /* ZJSegmentStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSegmentStyle.m; sourceTree = "<group>"; };
+		846065091F14D827000315EC /* ZJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTitleView.h; sourceTree = "<group>"; };
+		8460650A1F14D827000315EC /* ZJTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTitleView.m; sourceTree = "<group>"; };
 		8461933C1F0CBC66008F5309 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8461933F1F0CE306008F5309 /* LKPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKPageStyle.swift; sourceTree = "<group>"; };
 		846193411F0CE3AD008F5309 /* LKPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKPageView.swift; sourceTree = "<group>"; };
@@ -159,6 +184,30 @@
 				845467671F0E167C009DEFA1 /* LKWalkmanController.swift */,
 			);
 			path = TopicLIst;
+			sourceTree = "<group>";
+		};
+		846064F91F14D827000315EC /* ZJScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				846064FA1F14D827000315EC /* UIView+ZJFrame.h */,
+				846064FB1F14D827000315EC /* UIView+ZJFrame.m */,
+				846064FC1F14D827000315EC /* UIViewController+ZJScrollPageController.h */,
+				846064FD1F14D827000315EC /* UIViewController+ZJScrollPageController.m */,
+				846064FE1F14D827000315EC /* ZJCollectionView.h */,
+				846064FF1F14D827000315EC /* ZJCollectionView.m */,
+				846065001F14D827000315EC /* ZJContentView.h */,
+				846065011F14D827000315EC /* ZJContentView.m */,
+				846065021F14D827000315EC /* ZJScrollPageView.h */,
+				846065031F14D827000315EC /* ZJScrollPageView.m */,
+				846065041F14D827000315EC /* ZJScrollPageViewDelegate.h */,
+				846065051F14D827000315EC /* ZJScrollSegmentView.h */,
+				846065061F14D827000315EC /* ZJScrollSegmentView.m */,
+				846065071F14D827000315EC /* ZJSegmentStyle.h */,
+				846065081F14D827000315EC /* ZJSegmentStyle.m */,
+				846065091F14D827000315EC /* ZJTitleView.h */,
+				8460650A1F14D827000315EC /* ZJTitleView.m */,
+			);
+			path = ZJScrollPageView;
 			sourceTree = "<group>";
 		};
 		8461933E1F0CE2D8008F5309 /* LKPageView */ = {
@@ -417,6 +466,7 @@
 		846D12761EF3D73200567889 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				846064F91F14D827000315EC /* ZJScrollPageView */,
 				8461933E1F0CE2D8008F5309 /* LKPageView */,
 				848FCA661EF9308000A33046 /* SDCycleScrollView */,
 			);
@@ -813,6 +863,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846065121F14D827000315EC /* ZJTitleView.m in Sources */,
 				8461933D1F0CBC66008F5309 /* API.swift in Sources */,
 				84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */,
 				846193421F0CE3AD008F5309 /* LKPageView.swift in Sources */,
@@ -820,8 +871,12 @@
 				845467E21F0E2B33009DEFA1 /* LKEssenceModel.swift in Sources */,
 				846D12A01EF3E65500567889 /* LKFirstnewViewController.swift in Sources */,
 				848FCA7C1EF9308000A33046 /* UIView+SDExtension.m in Sources */,
+				8460650C1F14D827000315EC /* UIViewController+ZJScrollPageController.m in Sources */,
+				8460650E1F14D827000315EC /* ZJContentView.m in Sources */,
+				846065101F14D827000315EC /* ZJScrollSegmentView.m in Sources */,
 				848FCA761EF9308000A33046 /* TAAbstractDotView.m in Sources */,
 				846D128C1EF3D73200567889 /* AppDelegate.swift in Sources */,
+				8460650D1F14D827000315EC /* ZJCollectionView.m in Sources */,
 				846D12A61EF3EACF00567889 /* LKNavigationController.swift in Sources */,
 				845467611F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift in Sources */,
 				846D12A41EF3E67C00567889 /* LKMineViewController.swift in Sources */,
@@ -830,6 +885,7 @@
 				846193461F0CE499008F5309 /* LKContentView.swift in Sources */,
 				846D12A21EF3E67100567889 /* LKAttentionViewController.swift in Sources */,
 				848FCA771EF9308000A33046 /* TAAnimatedDotView.m in Sources */,
+				8460650F1F14D827000315EC /* ZJScrollPageView.m in Sources */,
 				846D129E1EF3E63400567889 /* LKEssenceViewController.swift in Sources */,
 				84768DE31EF795D60069AC47 /* LKPublishViewController.swift in Sources */,
 				846193441F0CE435008F5309 /* LKTitleView.swift in Sources */,
@@ -837,12 +893,14 @@
 				846193401F0CE306008F5309 /* LKPageStyle.swift in Sources */,
 				846D12941EF3DF5E00567889 /* UI+Extension.swift in Sources */,
 				845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */,
+				846065111F14D827000315EC /* ZJSegmentStyle.m in Sources */,
 				848FCA651EF9217000A33046 /* Comment.swift in Sources */,
 				848FCA781EF9308000A33046 /* TADotView.m in Sources */,
 				8476760E1F024916005741BC /* LKTool.swift in Sources */,
 				846D129C1EF3E62800567889 /* LKBaseViewController.swift in Sources */,
 				846D12921EF3DF1600567889 /* Frame+Extension.swift in Sources */,
 				845467681F0E167C009DEFA1 /* LKWalkmanController.swift in Sources */,
+				8460650B1F14D827000315EC /* UIView+ZJFrame.m in Sources */,
 				848FCA7A1EF9308000A33046 /* SDCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
