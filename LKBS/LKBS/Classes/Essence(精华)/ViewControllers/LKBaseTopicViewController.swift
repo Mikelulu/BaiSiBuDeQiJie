@@ -66,6 +66,7 @@ class LKBaseTopicViewController: LKBaseViewController {
         let table: UITableView = UITableView.init(frame: self.view.bounds, style: .plain)
         table.tableFooterView = UIView()
         table.separatorInset = UIEdgeInsets.zero
+
         table.delegate = self
         table.dataSource = self
 
@@ -82,19 +83,22 @@ class LKBaseTopicViewController: LKBaseViewController {
         view.addSubview(self.tableView)
 
         /// 添加下拉刷新
-        self.tableView.mj_header = MJRefreshHeader.init(refreshingBlock: { [unowned self] in
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [unowned self] in
             let url: String = String.init(format: self.urlString, 0)
             LKLog("请求的url为:" + url)
             self.getData(url, isLoadMore: false)
         })
 
         /// 添加上拉加载更多
-        self.tableView.mj_footer = MJRefreshAutoFooter.init(refreshingBlock: { [unowned self] in
+        self.tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: { [unowned self] in
 
             let url: String = String.init(format: self.urlString, self.page + 1)
             LKLog("请求的url为:" + url)
             self.getData(url, isLoadMore: true)
         })
+        /// 自动根据有无数据来显示和隐藏
+        self.tableView.mj_footer.isAutomaticallyHidden = true
+
     }
 
 }
@@ -123,6 +127,14 @@ extension LKBaseTopicViewController {
                         for model in responseModel.list! {
 
                             self.dataSource.append(model)
+                        }
+
+                        //过滤html
+                        for (index, model) in self.dataSource.enumerated() {
+
+                            if model.type == "html" {
+                                self.dataSource.remove(at: index)
+                            }
                         }
                     }
                 }

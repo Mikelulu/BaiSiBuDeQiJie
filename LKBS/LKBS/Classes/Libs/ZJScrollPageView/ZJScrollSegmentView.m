@@ -142,7 +142,6 @@ static CGFloat const contentSizeXOff = 20.0;
         ZJTitleView *titleView = [[ZJTitleView alloc] initWithFrame:CGRectZero];
         titleView.tag = index;
 
-        titleView.backgroundColor = [UIColor colorWithRed:252/255.0 green:49/255.0 blue:89/255.0 alpha:0.9];
 
         titleView.font = self.segmentStyle.titleFont;
         titleView.text = title;

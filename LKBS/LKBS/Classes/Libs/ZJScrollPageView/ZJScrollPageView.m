@@ -35,9 +35,9 @@
 
 
 - (void)commonInit {
-    
-    // 触发懒加载
-    self.segmentView.backgroundColor = [UIColor whiteColor];
+
+       // 触发懒加载
+    self.segmentView.backgroundColor = [UIColor colorWithRed:252/255.0 green:49/255.0 blue:89/255.0 alpha:0.9];
     self.contentView.backgroundColor = [UIColor whiteColor];
 }
 

@@ -14,12 +14,6 @@ class LKRecommendController: LKBaseTopicViewController {
 
         super.viewDidLoad()
 
-        if self.title == "推荐" {
-
-            self.urlString = "http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.5.6/%i-20.json"
-            self.isShowBanner = true
-        }
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +29,11 @@ extension LKRecommendController: ZJScrollPageViewChildVcDelegate {
 
     func zj_viewDidLoad(for index: Int) {
 
-        LKLog(self.zj_scroll.title)
+        if index == 0 {
+
+            self.urlString = "http://s.budejie.com/topic/list/jingxuan/1/bs0315-iphone-4.5.6/%i-20.json"
+            self.isShowBanner = true
+        }
     }
 
     func zj_viewWillAppear(for index: Int) {

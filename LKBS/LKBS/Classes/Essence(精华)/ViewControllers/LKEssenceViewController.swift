@@ -14,7 +14,7 @@ class LKEssenceViewController: LKBaseViewController {
     fileprivate let titles: [String] = ["推荐", "随听", "视频", "图片", "段子", "排行", "互动区", "网红", "社会", "投票", "美女", "冷知识", "游戏"]
 
     /// 控制器数组
-    fileprivate let childVCs = [LKRecommendController(), LKWalkmanController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController()]
+//    fileprivate let childVCs = [LKRecommendController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController()]
 
 
     override var shouldAutomaticallyForwardAppearanceMethods: Bool {
@@ -57,6 +57,8 @@ extension LKEssenceViewController {
         /// 颜色渐变
         segmentStyle.isGradualChangeTitleColor = true
 
+        segmentStyle.normalTitleColor = UIColor.lightGray
+        segmentStyle.selectedTitleColor = UIColor.white
 
         let pageView: ZJScrollPageView = ZJScrollPageView.init(frame: CGRect.init(x: 0, y: 64, width: kScreenW, height: kScreenH - 64 - 49), segmentStyle: segmentStyle, titles: titles, parentViewController: self, delegate: self)
 
