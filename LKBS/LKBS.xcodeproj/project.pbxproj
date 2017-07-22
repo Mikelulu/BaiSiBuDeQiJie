@@ -44,6 +44,7 @@
 		8476760E1F024916005741BC /* LKTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476760D1F024916005741BC /* LKTool.swift */; };
 		84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84768DE01EF7573C0069AC47 /* LKTabBar.swift */; };
 		84768DE31EF795D60069AC47 /* LKPublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84768DE21EF795D60069AC47 /* LKPublishViewController.swift */; };
+		8479632E1F2341F100DD919F /* LKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479632D1F2341F100DD919F /* LKDetailViewController.swift */; };
 		848FCA651EF9217000A33046 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA641EF9217000A33046 /* Comment.swift */; };
 		848FCA761EF9308000A33046 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA691EF9308000A33046 /* TAAbstractDotView.m */; };
 		848FCA771EF9308000A33046 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FCA6B1EF9308000A33046 /* TAAnimatedDotView.m */; };
@@ -126,6 +127,7 @@
 		8476760D1F024916005741BC /* LKTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTool.swift; sourceTree = "<group>"; };
 		84768DE01EF7573C0069AC47 /* LKTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTabBar.swift; sourceTree = "<group>"; };
 		84768DE21EF795D60069AC47 /* LKPublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKPublishViewController.swift; sourceTree = "<group>"; };
+		8479632D1F2341F100DD919F /* LKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LKDetailViewController.swift; path = TopicLIst/LKDetailViewController.swift; sourceTree = "<group>"; };
 		848FCA641EF9217000A33046 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		848FCA681EF9308000A33046 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		848FCA691EF9308000A33046 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 			children = (
 				846D129D1EF3E63400567889 /* LKEssenceViewController.swift */,
 				845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */,
+				8479632D1F2341F100DD919F /* LKDetailViewController.swift */,
 				845467641F0E0F47009DEFA1 /* TopicLIst */,
 			);
 			path = ViewControllers;
@@ -899,6 +902,7 @@
 				846193441F0CE435008F5309 /* LKTitleView.swift in Sources */,
 				848FCA791EF9308000A33046 /* TAPageControl.m in Sources */,
 				845AF97A1F1624A800F8E68B /* LKCommentView.swift in Sources */,
+				8479632E1F2341F100DD919F /* LKDetailViewController.swift in Sources */,
 				846193401F0CE306008F5309 /* LKPageStyle.swift in Sources */,
 				846D12941EF3DF5E00567889 /* UI+Extension.swift in Sources */,
 				845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */,

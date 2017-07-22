@@ -10,6 +10,9 @@ import UIKit
 import SVProgressHUD
 import ObjectMapper
 import MJRefresh
+import UITableView_FDTemplateLayoutCell
+
+let Identifier: String = "Identifier"
 
 class LKBaseTopicViewController: LKBaseViewController {
 
@@ -63,7 +66,7 @@ class LKBaseTopicViewController: LKBaseViewController {
     //// tableView
     fileprivate lazy var tableView: UITableView = {
 
-        let table: UITableView = UITableView.init(frame: self.view.bounds, style: .plain)
+        let table: UITableView = UITableView.init(frame: CGRect.zero, style: .plain)
         table.tableFooterView = UIView()
         table.separatorInset = UIEdgeInsets.zero
 
@@ -82,6 +85,11 @@ class LKBaseTopicViewController: LKBaseViewController {
 
         view.addSubview(self.tableView)
 
+        self.tableView.snp.makeConstraints { (make) in
+            make.left.top.right.equalTo(0)
+            make.height.equalTo(kScreenH - 64 - 49 - 44)
+        }
+
         /// 添加下拉刷新
         self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [unowned self] in
             let url: String = String.init(format: self.urlString, 0)
@@ -92,13 +100,20 @@ class LKBaseTopicViewController: LKBaseViewController {
         /// 添加上拉加载更多
         self.tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: { [unowned self] in
 
-            let url: String = String.init(format: self.urlString, self.page + 1)
+            let url: String = String.init(format: self.urlString, self.page)
             LKLog("请求的url为:" + url)
             self.getData(url, isLoadMore: true)
         })
         /// 自动根据有无数据来显示和隐藏
         self.tableView.mj_footer.isAutomaticallyHidden = true
 
+        self.tableView.register(LKRecommentCell.self, forCellReuseIdentifier: Identifier)
+
+        #if DEBUG
+        self.tableView.fd_debugLogEnabled = true
+        #endif
+
+        self.tableView.estimatedRowHeight = 200
     }
 
 }
@@ -121,6 +136,11 @@ extension LKBaseTopicViewController {
                 LKLog(jsonString)
 
                 if let responseModel = ResponseModel(JSONString: jsonString) {
+
+                    if let np = responseModel.info_np {
+
+                        self.page = np
+                    }
 
                     if (responseModel.list != nil){
 
@@ -159,14 +179,24 @@ extension LKBaseTopicViewController: UITableViewDelegate, UITableViewDataSource 
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "Identifier")
-        if cell == nil {
-            cell = UITableViewCell.init(style: .default, reuseIdentifier: "Identifier")
-        }
+        let cell: LKRecommentCell? = tableView.dequeueReusableCell(withIdentifier: Identifier) as? LKRecommentCell
+
+        cell?.configCell(self.dataSource[indexPath.row])
 
         return cell!
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        navigationController?.pushViewController(LKDetailViewController(), animated: true)
+    }
+
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        return tableView.fd_heightForCell(withIdentifier: Identifier, cacheBy: indexPath, configuration: {  (cell: Any?) -> Void in
+//            (cell as! LKRecommentCell).configCell(self.dataSource[indexPath.row])
+//        })
+//    }
 }
 
 // MARK: - public method

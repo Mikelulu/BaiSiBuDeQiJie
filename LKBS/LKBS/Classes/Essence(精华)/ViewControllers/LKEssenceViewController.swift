@@ -57,8 +57,10 @@ extension LKEssenceViewController {
         /// 颜色渐变
         segmentStyle.isGradualChangeTitleColor = true
 
-        segmentStyle.normalTitleColor = UIColor.lightGray
-        segmentStyle.selectedTitleColor = UIColor.white
+        segmentStyle.segmentHeight = 44
+
+        segmentStyle.normalTitleColor = RGBA(220, 220, 220, 1)
+        segmentStyle.selectedTitleColor = RGB(250, 250, 250)
 
         let pageView: ZJScrollPageView = ZJScrollPageView.init(frame: CGRect.init(x: 0, y: 64, width: kScreenW, height: kScreenH - 64 - 49), segmentStyle: segmentStyle, titles: titles, parentViewController: self, delegate: self)
 

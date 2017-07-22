@@ -17,6 +17,7 @@ import ObjectMapper
 import MJRefresh
 import SVProgressHUD
 import pop
+import UITableView_FDTemplateLayoutCell
 
 // 当前系统版本
 let kCersion = (UIDevice.current.systemVersion as NSString).floatValue

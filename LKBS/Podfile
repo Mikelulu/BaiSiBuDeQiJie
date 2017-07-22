@@ -17,5 +17,6 @@ target 'LKBS' do
   pod 'MJRefresh'
   pod 'SVProgressHUD'
   pod 'pop'
+  pod 'UITableView+FDTemplateLayoutCell'
 
 end

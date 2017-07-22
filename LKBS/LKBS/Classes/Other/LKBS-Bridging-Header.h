@@ -10,9 +10,6 @@
 #define LKBS_Bridging_Header_h
 
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 #import "SDCycleScrollView.h"
 #import "ZJScrollPageView.h"
 #import "ZJScrollSegmentView.h"

@@ -35,7 +35,7 @@ extension LKToolBarView {
 
         var lastBtn: UIButton?
 
-        let btnWidth = (self.width - 3) / CGFloat(normalImages.count)
+        let btnWidth: CGFloat = (kScreenW - 3) / CGFloat(normalImages.count)
         let btnHeight: CGFloat = 40
 
         for index in 0..<normalImages.count {
@@ -44,10 +44,16 @@ extension LKToolBarView {
             btn.setImage(UIImage.init(named: normalImages[index]), for: .normal)
             btn.setImage(UIImage.init(named: selectedImages[index]), for: .selected)
             btn.setTitle(titles[index], for: .normal)
-            btn.titleLabel?.textColor = kNormalColor
+            btn.setTitleColor(kNormalColor, for: .normal)
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
             btn.tag = index
 
+            if index == 0 || index == 2 {
+
+                btn.titleEdgeInsets = UIEdgeInsetsMake(4, 5, 0, 0)
+            }else {
+                btn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0)
+            }
             addSubview(btn)
 
             if (lastBtn != nil) {
@@ -61,6 +67,7 @@ extension LKToolBarView {
                     make.left.equalTo(self)
                     make.width.equalTo(btnWidth)
                     make.height.equalTo(btnHeight)
+                    make.top.equalTo(self)
                 })
             }
             lastBtn = btn
@@ -76,6 +83,7 @@ extension LKToolBarView {
             let lable: UILabel = UILabel()
             lable.backgroundColor = UIColor.gray
 
+            addSubview(lable)
             if lastLineLb != nil {
                 lable.snp.makeConstraints({ (make) in
                     make.top.equalTo(lastLineLb!)
@@ -86,6 +94,7 @@ extension LKToolBarView {
                 lable.snp.makeConstraints({ (make) in
                     make.centerY.equalTo(self)
                     make.size.equalTo(CGSize.init(width: lineWidth, height: lineHeight))
+                    make.left.equalTo(btnWidth)
                 })
             }
             lastLineLb = lable
