@@ -10,6 +10,10 @@ import UIKit
 
 class LKBaseViewController: UIViewController {
 
+    /// 缓存高度的字典
+    lazy var heightCacheDic = [IndexPath : CGFloat]()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,5 +52,18 @@ class LKBaseViewController: UIViewController {
 
 extension LKBaseViewController {
 
+    @objc(tableView:estimatedHeightForRowAtIndexPath:) func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        if let height = self.heightCacheDic[indexPath] {
+            return height
+        }
+
+        return 200
+    }
+
+    @objc(tableView:willDisplayCell:forRowAtIndexPath:) func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        self.heightCacheDic[indexPath] = cell.frame.size.height
+    }
 
 }

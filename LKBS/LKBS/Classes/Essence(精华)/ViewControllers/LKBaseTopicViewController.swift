@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 import ObjectMapper
 import MJRefresh
-import UITableView_FDTemplateLayoutCell
+
 
 let Identifier: String = "Identifier"
 
@@ -109,11 +109,6 @@ class LKBaseTopicViewController: LKBaseViewController {
 
         self.tableView.register(LKRecommentCell.self, forCellReuseIdentifier: Identifier)
 
-        #if DEBUG
-        self.tableView.fd_debugLogEnabled = true
-        #endif
-
-        self.tableView.estimatedRowHeight = 200
     }
 
 }
@@ -191,12 +186,6 @@ extension LKBaseTopicViewController: UITableViewDelegate, UITableViewDataSource 
         navigationController?.pushViewController(LKDetailViewController(), animated: true)
     }
 
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        return tableView.fd_heightForCell(withIdentifier: Identifier, cacheBy: indexPath, configuration: {  (cell: Any?) -> Void in
-//            (cell as! LKRecommentCell).configCell(self.dataSource[indexPath.row])
-//        })
-//    }
 }
 
 // MARK: - public method
