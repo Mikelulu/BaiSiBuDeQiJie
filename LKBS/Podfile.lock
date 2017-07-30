@@ -1,8 +1,18 @@
 PODS:
   - Alamofire (4.5.0)
+  - BMPlayer (0.8.7):
+    - BMPlayer/Full (= 0.8.7)
+  - BMPlayer/Core (0.8.7)
+  - BMPlayer/Full (0.8.7):
+    - BMPlayer/Core
+    - NVActivityIndicatorView (~> 3.5)
+    - SnapKit (~> 3.2)
   - HandyJSON (1.7.2)
   - Kingfisher (3.10.3)
   - MJRefresh (3.1.12)
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
   - ObjectMapper (2.2.7)
   - pop (1.0.10)
   - SnapKit (3.2.0)
@@ -11,6 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - BMPlayer
   - HandyJSON
   - Kingfisher
   - MJRefresh
@@ -22,15 +33,17 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  BMPlayer: 5ba9e3f3d61ccc5a24ebd9cdc24901dcf28c98bc
   HandyJSON: e7ad0483005826baba1d1c251cd98d0aa8bd8cce
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: e6bc186a982e54ae133d610af933b368909d1cac
+PODFILE CHECKSUM: a024fdb679089693ad5929deb915e0d038753544
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

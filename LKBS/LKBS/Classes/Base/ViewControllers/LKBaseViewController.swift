@@ -52,18 +52,18 @@ class LKBaseViewController: UIViewController {
 
 extension LKBaseViewController {
 
-    @objc(tableView:estimatedHeightForRowAtIndexPath:) func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-
-        if let height = self.heightCacheDic[indexPath] {
-            return height
-        }
-
-        return 200
-    }
-
-    @objc(tableView:willDisplayCell:forRowAtIndexPath:) func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-
-        self.heightCacheDic[indexPath] = cell.frame.size.height
-    }
-
+//    @objc(tableView:estimatedHeightForRowAtIndexPath:) func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        if let height = self.heightCacheDic[indexPath] {
+//            return height
+//        }
+//
+//        return 200
+//    }
+//
+//    @objc(tableView:willDisplayCell:forRowAtIndexPath:) func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//
+//        self.heightCacheDic[indexPath] = cell.frame.size.height
+//    }
+//
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0474C9441F2C86C60015C7A1 /* LKTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474C9431F2C86C60015C7A1 /* LKTimeManager.swift */; };
+		0474C9481F2CA1200015C7A1 /* LKCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474C9471F2CA1200015C7A1 /* LKCellContentView.swift */; };
 		845467611F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */; };
 		845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */; };
 		845467661F0E0F6E009DEFA1 /* LKRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0474C9431F2C86C60015C7A1 /* LKTimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTimeManager.swift; sourceTree = "<group>"; };
+		0474C9471F2CA1200015C7A1 /* LKCellContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCellContentView.swift; sourceTree = "<group>"; };
 		845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKBaseTopicViewController.swift; sourceTree = "<group>"; };
 		845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKNetworkManager.swift; sourceTree = "<group>"; };
 		845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRecommendController.swift; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 				845AF9751F16110C00F8E68B /* LKRecommentCell.swift */,
 				845AF9771F16242700F8E68B /* LKToolBarView.swift */,
 				845AF9791F1624A800F8E68B /* LKCommentView.swift */,
+				0474C9471F2CA1200015C7A1 /* LKCellContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -643,6 +648,7 @@
 			children = (
 				8476760D1F024916005741BC /* LKTool.swift */,
 				845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */,
+				0474C9431F2C86C60015C7A1 /* LKTimeManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -832,7 +838,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4021523CB045062876484880 /* [CP] Embed Pods Frameworks */ = {
@@ -883,6 +889,7 @@
 				8460650C1F14D827000315EC /* UIViewController+ZJScrollPageController.m in Sources */,
 				8460650E1F14D827000315EC /* ZJContentView.m in Sources */,
 				846065101F14D827000315EC /* ZJScrollSegmentView.m in Sources */,
+				0474C9481F2CA1200015C7A1 /* LKCellContentView.swift in Sources */,
 				845AF9781F16242700F8E68B /* LKToolBarView.swift in Sources */,
 				848FCA761EF9308000A33046 /* TAAbstractDotView.m in Sources */,
 				846D128C1EF3D73200567889 /* AppDelegate.swift in Sources */,
@@ -908,6 +915,7 @@
 				845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */,
 				846065111F14D827000315EC /* ZJSegmentStyle.m in Sources */,
 				848FCA651EF9217000A33046 /* Comment.swift in Sources */,
+				0474C9441F2C86C60015C7A1 /* LKTimeManager.swift in Sources */,
 				848FCA781EF9308000A33046 /* TADotView.m in Sources */,
 				8476760E1F024916005741BC /* LKTool.swift in Sources */,
 				846D129C1EF3E62800567889 /* LKBaseViewController.swift in Sources */,
@@ -1065,7 +1073,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziding.LKBS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/BaiSiBuDeQiJie/LKBS/LKBS/Classes/Other/LKBS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LKBS/Classes/Other/LKBS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1082,7 +1090,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziding.LKBS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Desktop/BaiSiBuDeQiJie/LKBS/LKBS/Classes/Other/LKBS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LKBS/Classes/Other/LKBS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -109,6 +109,7 @@ class LKBaseTopicViewController: LKBaseViewController {
 
         self.tableView.register(LKRecommentCell.self, forCellReuseIdentifier: Identifier)
 
+        self.tableView.estimatedRowHeight = 300
     }
 
 }

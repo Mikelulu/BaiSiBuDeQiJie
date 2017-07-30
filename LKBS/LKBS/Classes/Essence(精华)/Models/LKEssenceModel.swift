@@ -51,8 +51,8 @@ struct ListModel: Mappable {
 
     /// 视频相关的
     var video_playfcount: Int?
-    var video_width: Int?
-    var video_height: Int?
+    var video_width: CGFloat?
+    var video_height: CGFloat?
     var video_uri:String?
     var video_duration: Int?
     var video_playcount: Int?
@@ -62,21 +62,21 @@ struct ListModel: Mappable {
     /// 图片相关的
     var image_medium: String?
     var image_big: String?
-    var image_height: Int?
-    var image_width: Int?
+    var image_height: CGFloat?
+    var image_width: CGFloat?
     var image_small: String?
     var image_thumbnail_small: String?
 
     /// gif
     var images_gif: String?
-    var gif_width: Int?
+    var gif_width: CGFloat?
     var gif_thumbnail: String?
-    var gif_height: Int?
+    var gif_height: CGFloat?
 
     /// 音频
     var audio_playfcount: Int?
-    var audio_height: Int?
-    var audio_width: Int?
+    var audio_height: CGFloat?
+    var audio_width: CGFloat?
     var audio_duration: Int?
     var audio_playcount: Int?
     var audio_uri: String?

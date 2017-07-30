@@ -30,7 +30,7 @@ class LKRecommentCell: UITableViewCell {
 
         let imageV: UIImageView = UIImageView()
         imageV.layer.cornerRadius = 40 * 0.5
-        //        imageV.layer.masksToBounds = true
+        imageV.layer.masksToBounds = true
         return imageV
     }()
 
@@ -95,6 +95,13 @@ class LKRecommentCell: UITableViewCell {
 
     /// video
 
+    fileprivate lazy var contentV: LKCellContentView = {
+        
+        let view: LKCellContentView = LKCellContentView()
+        
+        return view
+    }()
+    
     /// 评论tableView
     fileprivate lazy var commentView: UITableView = {
 
@@ -126,6 +133,7 @@ extension LKRecommentCell {
         self.contentView.addSubview(timeLb)
         self.contentView.addSubview(moreBtn)
         self.contentView.addSubview(textLb)
+        self.contentView.addSubview(contentV)
 //        self.contentView.addSubview(commentView)
 //        self.contentView.addSubview(toolBarV)
 
@@ -143,7 +151,7 @@ extension LKRecommentCell {
 
         self.vipIV.snp.makeConstraints { (make) in
             make.top.equalTo(headIV.snp.bottom).offset(-10)
-            make.right.equalTo(headIV.snp.right).offset(-5)
+            make.right.equalTo(headIV.snp.right).offset(-2)
         }
 
         self.weiboVipIV.snp.makeConstraints { (make) in
@@ -164,9 +172,15 @@ extension LKRecommentCell {
             make.left.equalTo(kMargin)
             make.right.equalTo(-kMargin)
             make.top.equalTo(headIV.snp.bottom).offset(kMargin)
+//            make.bottom.equalTo(-kMargin)
+        }
+        
+        self.contentV.snp.makeConstraints { (make) in
+            make.top.equalTo(textLb.snp.bottom).offset(kMargin)
+            make.left.right.equalTo(0)
+            make.height.equalTo(0)
             make.bottom.equalTo(-kMargin)
         }
-//        self.textLb.preferredMaxLayoutWidth = kScreenW - 2 * kMargin
 
 //        self.toolBarV.snp.makeConstraints { (make) in
 //            make.bottom.equalTo(self.contentView).offset(-1)
@@ -181,10 +195,65 @@ extension LKRecommentCell {
 
     public func configCell(_ model: ListModel) {
 
-        self.textLb.text = "如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作"
+        self.textLb.text = model.text
 
-        self.headIV.backgroundColor = UIColor.red
-        self.nickNameLb.text = "Michael"
-        self.timeLb.text = "1小时前"
+        self.headIV.kf.setImage(with: URL.init(string: (model.u?.header)!), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+        self.nickNameLb.text = model.u?.name
+        
+        self.timeLb.text = LKTimeManager.getPublishTimeString(model.passtime)
+        
+        /// 是否是VIP
+        if (model.u?.is_v)! {
+            vipIV.isHidden = false
+        }else {
+            vipIV.isHidden = true
+        }
+        
+        /// 是否是微博VIP
+        if (model.u?.is_vip)! {
+            weiboVipIV.isHidden = false
+        }else {
+            weiboVipIV.isHidden = true
+        }
+        
+        /// 判断是什么类型
+        if model.type == "video" {
+            self.contentV.isHidden = false
+            self.contentV.snp.updateConstraints({ (make) in
+                make.height.equalTo(kScreenW * model.video_height! / model.video_width!)
+            })
+            self.contentV.congigContent(type: .video, model: model)
+        }else if model.type == "image" {
+            self.contentV.isHidden = false
+            let height: CGFloat = kScreenW * model.image_height! / model.image_width!
+            
+            self.contentV.snp.updateConstraints({ (make) in
+                if height > kScreenH * 0.5 {
+                    make.height.equalTo(200)
+                }else {
+                    
+                    make.height.equalTo(height)
+                }
+            })
+            self.contentV.congigContent(type: .image, model: model)
+        }else if model.type == "gif" {
+            self.contentV.isHidden = false
+            self.contentV.snp.updateConstraints({ (make) in
+                make.height.equalTo(kScreenW * model.gif_height! / model.gif_width!)
+            })
+            self.contentV.congigContent(type: .gif, model: model)
+        }else if model.type == "audio" {
+            self.contentV.isHidden = false
+            self.contentV.snp.updateConstraints({ (make) in
+                make.height.equalTo(kScreenW * model.audio_height! / model.audio_width!)
+            })
+            self.contentV.congigContent(type: .audio, model: model)
+        }else {
+            self.contentV.isHidden = true
+            self.contentV.snp.updateConstraints({ (make) in
+                make.height.equalTo(0)
+            })
+            self.contentV.congigContent(type: .text, model: model)
+        }
     }
 }

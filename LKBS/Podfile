@@ -12,6 +12,8 @@ target 'LKBS' do
   pod 'SnapKit' 
   pod 'HandyJSON'
   pod 'ObjectMapper'
+  pod 'BMPlayer'
+
 
 
   pod 'MJRefresh'
