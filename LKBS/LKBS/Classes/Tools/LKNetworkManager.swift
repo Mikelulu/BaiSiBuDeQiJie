@@ -17,9 +17,9 @@ class LKNetworkManager: NSObject {
     static let shareInstance: LKNetworkManager = LKNetworkManager()
 
 
-    public func request(_ urlString: String, method: HTTPMethod, parameters: [String : Any]? = nil, finished: @escaping ((String?, Error?) -> ())) {
+    public func request(_ urlString: String, method: HTTPMethod, parameters: [String : Any]? = nil, finished: @escaping (([String: Any]?, Error?) -> ())) {
 
-        Alamofire.request(urlString, method: method, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString { (dataResponse) in
+        Alamofire.request(urlString, method: method, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON { (dataResponse) in
 
             SVProgressHUD.dismiss()
 
@@ -27,7 +27,7 @@ class LKNetworkManager: NSObject {
 
                 if let jsonString = dataResponse.result.value {
 
-                    finished(jsonString, nil)
+                    finished(jsonString as? [String : Any], nil)
                 }
 
             }else {

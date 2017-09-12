@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0474C9441F2C86C60015C7A1 /* LKTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474C9431F2C86C60015C7A1 /* LKTimeManager.swift */; };
 		0474C9481F2CA1200015C7A1 /* LKCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474C9471F2CA1200015C7A1 /* LKCellContentView.swift */; };
+		842350BC1F57FE9A00A3F9F8 /* LKAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350BB1F57FE9A00A3F9F8 /* LKAudioView.swift */; };
+		842350BE1F57FEAF00A3F9F8 /* LKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350BD1F57FEAF00A3F9F8 /* LKImageView.swift */; };
+		842350C01F57FEBD00A3F9F8 /* LKGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350BF1F57FEBD00A3F9F8 /* LKGifView.swift */; };
+		842350C21F57FECB00A3F9F8 /* LKVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350C11F57FECB00A3F9F8 /* LKVideoView.swift */; };
+		842350C41F57FED500A3F9F8 /* LKTextview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350C31F57FED500A3F9F8 /* LKTextview.swift */; };
 		845467611F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */; };
 		845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */; };
 		845467661F0E0F6E009DEFA1 /* LKRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */; };
@@ -78,6 +83,11 @@
 /* Begin PBXFileReference section */
 		0474C9431F2C86C60015C7A1 /* LKTimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTimeManager.swift; sourceTree = "<group>"; };
 		0474C9471F2CA1200015C7A1 /* LKCellContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCellContentView.swift; sourceTree = "<group>"; };
+		842350BB1F57FE9A00A3F9F8 /* LKAudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKAudioView.swift; sourceTree = "<group>"; };
+		842350BD1F57FEAF00A3F9F8 /* LKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKImageView.swift; sourceTree = "<group>"; };
+		842350BF1F57FEBD00A3F9F8 /* LKGifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKGifView.swift; sourceTree = "<group>"; };
+		842350C11F57FECB00A3F9F8 /* LKVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKVideoView.swift; sourceTree = "<group>"; };
+		842350C31F57FED500A3F9F8 /* LKTextview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTextview.swift; sourceTree = "<group>"; };
 		845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKBaseTopicViewController.swift; sourceTree = "<group>"; };
 		845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKNetworkManager.swift; sourceTree = "<group>"; };
 		845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRecommendController.swift; sourceTree = "<group>"; };
@@ -433,6 +443,11 @@
 				845AF9771F16242700F8E68B /* LKToolBarView.swift */,
 				845AF9791F1624A800F8E68B /* LKCommentView.swift */,
 				0474C9471F2CA1200015C7A1 /* LKCellContentView.swift */,
+				842350BB1F57FE9A00A3F9F8 /* LKAudioView.swift */,
+				842350BD1F57FEAF00A3F9F8 /* LKImageView.swift */,
+				842350BF1F57FEBD00A3F9F8 /* LKGifView.swift */,
+				842350C11F57FECB00A3F9F8 /* LKVideoView.swift */,
+				842350C31F57FED500A3F9F8 /* LKTextview.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -881,6 +896,7 @@
 				846065121F14D827000315EC /* ZJTitleView.m in Sources */,
 				8461933D1F0CBC66008F5309 /* API.swift in Sources */,
 				84768DE11EF7573C0069AC47 /* LKTabBar.swift in Sources */,
+				842350BE1F57FEAF00A3F9F8 /* LKImageView.swift in Sources */,
 				846193421F0CE3AD008F5309 /* LKPageView.swift in Sources */,
 				846D128E1EF3D8D400567889 /* LKTabbarController.swift in Sources */,
 				845467E21F0E2B33009DEFA1 /* LKEssenceModel.swift in Sources */,
@@ -888,6 +904,7 @@
 				848FCA7C1EF9308000A33046 /* UIView+SDExtension.m in Sources */,
 				8460650C1F14D827000315EC /* UIViewController+ZJScrollPageController.m in Sources */,
 				8460650E1F14D827000315EC /* ZJContentView.m in Sources */,
+				842350C01F57FEBD00A3F9F8 /* LKGifView.swift in Sources */,
 				846065101F14D827000315EC /* ZJScrollSegmentView.m in Sources */,
 				0474C9481F2CA1200015C7A1 /* LKCellContentView.swift in Sources */,
 				845AF9781F16242700F8E68B /* LKToolBarView.swift in Sources */,
@@ -905,6 +922,7 @@
 				848FCA771EF9308000A33046 /* TAAnimatedDotView.m in Sources */,
 				8460650F1F14D827000315EC /* ZJScrollPageView.m in Sources */,
 				846D129E1EF3E63400567889 /* LKEssenceViewController.swift in Sources */,
+				842350BC1F57FE9A00A3F9F8 /* LKAudioView.swift in Sources */,
 				84768DE31EF795D60069AC47 /* LKPublishViewController.swift in Sources */,
 				846193441F0CE435008F5309 /* LKTitleView.swift in Sources */,
 				848FCA791EF9308000A33046 /* TAPageControl.m in Sources */,
@@ -912,6 +930,8 @@
 				8479632E1F2341F100DD919F /* LKDetailViewController.swift in Sources */,
 				846193401F0CE306008F5309 /* LKPageStyle.swift in Sources */,
 				846D12941EF3DF5E00567889 /* UI+Extension.swift in Sources */,
+				842350C41F57FED500A3F9F8 /* LKTextview.swift in Sources */,
+				842350C21F57FECB00A3F9F8 /* LKVideoView.swift in Sources */,
 				845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */,
 				846065111F14D827000315EC /* ZJSegmentStyle.m in Sources */,
 				848FCA651EF9217000A33046 /* Comment.swift in Sources */,

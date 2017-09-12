@@ -119,7 +119,7 @@ extension LKBaseTopicViewController {
 
     fileprivate func getData(_ url: String, isLoadMore: Bool) {
 
-//        SVProgressHUD.show()
+        SVProgressHUD.show()
 
         LKNetworkManager.shareInstance.request(url, method: .get) { (responseString, error) in
 
@@ -129,9 +129,12 @@ extension LKBaseTopicViewController {
 
             if let jsonString = responseString {
 
-                LKLog(jsonString)
+//                LKLog(jsonString)
 
-                if let responseModel = ResponseModel(JSONString: jsonString) {
+                if let responseModel = ResponseModel(JSON: jsonString) {
+
+                    let jsonString1 = responseModel.toJSON()
+                    LKLog(jsonString1)
 
                     if let np = responseModel.info_np {
 
