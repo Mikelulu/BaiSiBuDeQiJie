@@ -44,7 +44,7 @@ class LKPublishViewController: LKBaseViewController {
     }
 
     deinit {
-        kDealloc(self)
+        
     }
 }
 

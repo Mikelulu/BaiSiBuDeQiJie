@@ -24,10 +24,10 @@ class LKNavigationController: UINavigationController {
         /// 设置导航栏颜色 导航标题字体大小个颜色
 //        UINavigationBar.appearance().barTintColor = kNavTinColor
 
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 16), NSForegroundColorAttributeName : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 16), NSAttributedStringKey.foregroundColor : UIColor.white]
 
         /// 设置BarButtonItem的颜色以及字体大小
-        UIBarButtonItem.appearance().setTitleTextAttributes( [NSForegroundColorAttributeName : UIColor.lightGray, NSFontAttributeName : UIFont.boldSystemFont(ofSize: 16)], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes( [NSAttributedStringKey.foregroundColor : UIColor.lightGray, NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 16)], for: .normal)
 
 
         /// 去掉导航栏底部细线

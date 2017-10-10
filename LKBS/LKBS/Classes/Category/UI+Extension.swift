@@ -94,14 +94,14 @@ extension String {
     // MARK: - 获取字符串的宽度
     public static func getStringWidth(string: String, fontSize: CGFloat) -> CGFloat {
 
-        let rect = string.boundingRect(with: CGSize.init(width: Double(MAXFLOAT), height: 10), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: fontSize)], context: nil)
+        let rect = string.boundingRect(with: CGSize.init(width: Double(MAXFLOAT), height: 10), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize)], context: nil)
         return CGFloat(ceilf(Float(rect.width)))
     }
 
     // MARK: - 获取字符串的高度
     public static func getStringHeight(string: String, fontSize: CGFloat, width: CGFloat) -> CGFloat {
 
-        let rect = string.boundingRect(with: CGSize.init(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: fontSize)], context: nil)
+        let rect = string.boundingRect(with: CGSize.init(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize)], context: nil)
         return CGFloat(ceil(Float(rect.height)))
     }
 

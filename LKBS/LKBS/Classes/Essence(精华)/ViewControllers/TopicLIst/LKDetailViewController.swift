@@ -7,29 +7,52 @@
 //
 
 import UIKit
+import BMPlayer
 
 class LKDetailViewController: LKBaseViewController {
 
+    open var model: ListModel? {
+        
+        didSet {
+            
+            let url = BMPlayerResource.init(url: URL.init(string: model!.video_uri!)!)
+            player.setVideo(resource: url)
+        }
+    }
+    
+    private let player: BMPlayer = BMPlayer()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "详情"
+        view.addSubview(player)
+        player.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view).offset(kStatusBarHeight)
+            make.left.right.equalTo(self.view)
+            make.height.equalTo(player.snp.width).multipliedBy(9.0/16.0).priority(750)
+        }
+        // Back button event
+        player.backBlock = { [unowned self] (isFullScreen) in
+            if isFullScreen == true { return }
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    deinit {
+        
+        LKLog("播放器释放了")
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

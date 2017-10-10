@@ -31,7 +31,7 @@ class LKEssenceViewController: LKBaseViewController {
     }
 
     deinit {
-        kDealloc(self)
+       
     }
 }
 
@@ -62,7 +62,7 @@ extension LKEssenceViewController {
         segmentStyle.normalTitleColor = RGBA(220, 220, 220, 1)
         segmentStyle.selectedTitleColor = RGB(250, 250, 250)
 
-        let pageView: ZJScrollPageView = ZJScrollPageView.init(frame: CGRect.init(x: 0, y: 64, width: kScreenW, height: kScreenH - 64 - 49), segmentStyle: segmentStyle, titles: titles, parentViewController: self, delegate: self)
+        let pageView: ZJScrollPageView = ZJScrollPageView.init(frame: CGRect.init(x: 0, y: kNavigationHeight, width: kScreenW, height: kScreenH - kNavigationHeight - kTabbarHeight), segmentStyle: segmentStyle, titles: titles, parentViewController: self, delegate: self)
 
         self.view.addSubview(pageView)
     }
@@ -76,18 +76,17 @@ extension LKEssenceViewController: ZJScrollPageViewDelegate {
         return self.titles.count
     }
 
-    func childViewController(_ reuseViewController: UIViewController!, for index: Int) -> UIViewController! {
-
-        LKLog(index)
-
+    func childViewController(_ reuseViewController: (UIViewController & ZJScrollPageViewChildVcDelegate)!, for index: Int) -> (UIViewController & ZJScrollPageViewChildVcDelegate)! {
+        
         var childVC = reuseViewController
-
+        
         if childVC == nil {
             childVC = LKRecommendController()
         }
-
+        
         return childVC
     }
+    
 }
 // MARK: - 事件处理
 extension LKEssenceViewController {

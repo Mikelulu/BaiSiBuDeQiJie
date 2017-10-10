@@ -151,7 +151,7 @@ extension LKTitleView {
             if titleStyle.isScrollEnable{
                 //可以滚动
                 let size = CGSize(width: CGFloat(MAXFLOAT), height: 0)
-                let attributes = [NSFontAttributeName : titleStyle.titleFont]
+                let attributes = [NSAttributedStringKey.font : titleStyle.titleFont]
                 labelW =  (titleLabel.text! as NSString).boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil).width
                 labelX = ( i==0 ? titleStyle.titleMargin * 0.5 : (titleLabels[i-1].frame.maxX + titleStyle.titleMargin ))
             }else{

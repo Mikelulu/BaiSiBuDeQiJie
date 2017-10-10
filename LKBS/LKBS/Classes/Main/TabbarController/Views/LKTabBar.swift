@@ -39,7 +39,7 @@ class LKTabBar: UITabBar {
         var btnX: CGFloat = 0
 
         let btnW: CGFloat = self.bounds.width / CGFloat((self.items?.count)! + 1)
-        let btnH: CGFloat = self.bounds.height
+        let btnH: CGFloat = self.bounds.height - kTabbarSafeBottomMargin
 
         var btnArr: Array<UIControl> = []
 
@@ -72,7 +72,7 @@ class LKTabBar: UITabBar {
         }
 
         /// 设置中间按钮的位置
-        plusBtn.center = CGPoint.init(x: self.bounds.size.width * 0.5, y: self.bounds.height * 0.5)
+        plusBtn.center = CGPoint.init(x: self.bounds.size.width * 0.5, y: (self.bounds.height - kTabbarSafeBottomMargin) * 0.5)
     }
 }
 

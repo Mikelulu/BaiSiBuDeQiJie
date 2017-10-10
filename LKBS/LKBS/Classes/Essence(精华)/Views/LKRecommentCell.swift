@@ -122,8 +122,8 @@ class LKRecommentCell: UITableViewCell {
         let table = UITableView.init(frame: CGRect.zero, style: .plain)
         table.separatorStyle = .none
         table.tableFooterView = UIView()
-        //        table.delegate = self
-        //        table.dataSource = self
+//                table.delegate = self
+//                table.dataSource = self
 
         return table
     }()
@@ -135,6 +135,7 @@ class LKRecommentCell: UITableViewCell {
         return view
     }()
 
+    
 }
 extension LKRecommentCell {
 
@@ -148,11 +149,16 @@ extension LKRecommentCell {
         self.contentView.addSubview(moreBtn)
         self.contentView.addSubview(textLb)
 
-//        self.contentView.addSubview(imageV)
-//        self.contentView.addSubview(gifView)
+        self.contentView.addSubview(imageV)
+        self.contentView.addSubview(gifView)
         self.contentView.addSubview(videoView)
-//        self.contentView.addSubview(audioView)
+        self.contentView.addSubview(audioView)
 
+        self.videoView.isHidden = true
+        self.audioView.isHidden = true
+        self.gifView.isHidden = true
+        self.imageV.isHidden = true
+        
 //        self.contentView.addSubview(commentView)
 //        self.contentView.addSubview(toolBarV)
 
@@ -191,15 +197,34 @@ extension LKRecommentCell {
             make.left.equalTo(kMargin)
             make.right.equalTo(-kMargin)
             make.top.equalTo(headIV.snp.bottom).offset(kMargin)
-            make.bottom.equalTo(-kMargin)
         }
-
-
+        
 //        self.toolBarV.snp.makeConstraints { (make) in
 //            make.bottom.equalTo(self.contentView).offset(-1)
 //            make.size.equalTo(CGSize.init(width: kScreenW, height: 40))
 //            make.left.equalTo(0)
 //        }
+    }
+    
+    override func prepareForReuse() {
+        
+        super.prepareForReuse()
+        
+        headIV.image = nil
+        nickNameLb.text = nil
+        vipIV.image = nil
+        weiboVipIV.image = nil
+        timeLb.text = nil
+        moreBtn.setImage(nil, for: .normal)
+        textLb.text = nil
+        imageV.bgImageV.image = nil
+        imageV.playBtn.setImage(nil, for: .normal)
+        gifView.bgImageV.image = nil
+        gifView.playBtn.setImage(nil, for: .normal)
+        videoView.bgImageV.image = nil
+        videoView.playBtn.setImage(nil, for: .normal)
+        audioView.bgImageV.image = nil
+        audioView.playBtn.setImage(nil, for: .normal)
     }
 }
 
@@ -228,83 +253,109 @@ extension LKRecommentCell {
         }else {
             weiboVipIV.isHidden = true
         }
-        
-//        /// 判断是什么类型
-//        if model.type == "video" {
-//            self.videoView.isHidden = false
-//            self.audioView.isHidden = true
-//            self.gifView.isHidden = true
-//            self.imageV.isHidden = true
-//
-//            self.videoView.snp.remakeConstraints { (make) in
-//                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
-//                make.left.right.equalTo(0)
-//                make.height.equalTo(300)
-//                make.bottom.equalTo(-kMargin)
-//            }
-//            self.videoView.configVideo(model: model)
-//        }
-//        else if model.type == "image" {
-//
-//            self.videoView.isHidden = true
-//            self.audioView.isHidden = true
-//            self.gifView.isHidden = true
-//            self.imageV.isHidden = false
-//
-////            let height: CGFloat = kScreenW * model.image_height! / model.image_width!
-//
-//            self.imageV.snp.remakeConstraints { (make) in
-//                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
-//                make.left.right.equalTo(0)
-//
-//                make.height.equalTo(200)
-//                make.bottom.equalTo(-kMargin)
-//            }
-//            self.imageV.configImage(model: model)
-//        }
-////        else if model.type == "gif" {
-////            self.videoView.isHidden = true
-////            self.audioView.isHidden = true
-////            self.gifView.isHidden = false
-////            self.imageV.isHidden = true
-////
-////            self.gifView.snp.remakeConstraints { (make) in
-////                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
-////                make.left.right.equalTo(0)
-////                make.height.equalTo(300)
-////                make.bottom.equalTo(-kMargin)
-////            }
-////
-////            self.gifView.configGif(model: model)
-////        }else if model.type == "audio" {
-////
-////            self.videoView.isHidden = true
-////            self.audioView.isHidden = false
-////            self.gifView.isHidden = true
-////            self.imageV.isHidden = true
-////
-////            self.audioView.snp.remakeConstraints { (make) in
-////                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
-////                make.left.right.equalTo(0)
-////                make.height.equalTo(150)
-////                make.bottom.equalTo(-kMargin)
-////            }
-////
-////            self.audioView.configAudio(model: model)
-////        }
-//        else {
-//            self.videoView.isHidden = true
-//            self.audioView.isHidden = true
-//            self.gifView.isHidden = true
-//            self.imageV.isHidden = true
-////
-//            self.textLb.snp.remakeConstraints { (make) in
-//                make.left.equalTo(kMargin)
-//                make.right.equalTo(-kMargin)
-//                make.top.equalTo(headIV.snp.bottom).offset(kMargin)
-//                make.bottom.equalTo(-kMargin)
-//            }
-//
-//        }
+    
+        /// 判断是什么类型
+        if model.type == "video" {
+            self.videoView.isHidden = false
+            self.audioView.isHidden = true
+            self.gifView.isHidden = true
+            self.imageV.isHidden = true
+            
+            if model.text == nil {
+                self.textLb.isHidden = true
+            }else {
+                self.textLb.isHidden = false
+            }
+            
+            self.videoView.configVideo(model: model)
+            
+            self.videoView.snp.remakeConstraints { (make) in
+                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
+                make.left.right.equalTo(0)
+                make.height.equalTo(300)
+                make.bottom.equalTo(-kMargin)
+            }
+        }
+        else if model.type == "image" {
+
+            self.videoView.isHidden = true
+            self.audioView.isHidden = true
+            self.gifView.isHidden = true
+            self.imageV.isHidden = false
+            
+            if model.text == nil {
+                self.textLb.isHidden = true
+            }else {
+                self.textLb.isHidden = false
+            }
+            
+//            let height: CGFloat = kScreenW * model.image_height! / model.image_width!
+            
+            self.imageV.snp.remakeConstraints { (make) in
+                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
+                make.left.right.equalTo(0)
+                make.height.equalTo(200)
+                make.bottom.equalTo(-kMargin)
+            }
+            
+            self.imageV.configImage(model: model)
+        }
+        else if model.type == "gif" {
+            self.videoView.isHidden = true
+            self.audioView.isHidden = true
+            self.gifView.isHidden = false
+            self.imageV.isHidden = true
+            
+            if model.text == nil {
+                self.textLb.isHidden = true
+            }else {
+                self.textLb.isHidden = false
+            }
+            
+            self.gifView.snp.remakeConstraints { (make) in
+                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
+                make.left.right.equalTo(0)
+                make.height.equalTo(300)
+                make.bottom.equalTo(-kMargin)
+            }
+            
+            self.gifView.configGif(model: model)
+        }else if model.type == "audio" {
+
+            self.videoView.isHidden = true
+            self.audioView.isHidden = false
+            self.gifView.isHidden = true
+            self.imageV.isHidden = true
+
+            if model.text == nil {
+                self.textLb.isHidden = true
+            }else {
+                self.textLb.isHidden = false
+            }
+            
+            self.audioView.snp.remakeConstraints { (make) in
+                make.top.equalTo(textLb.snp.bottom).offset(kMargin)
+                make.left.right.equalTo(0)
+                make.height.equalTo(150)
+                make.bottom.equalTo(-kMargin)
+            }
+            
+            self.audioView.configAudio(model: model)
+        }
+        else {
+            self.videoView.isHidden = true
+            self.audioView.isHidden = true
+            self.gifView.isHidden = true
+            self.imageV.isHidden = true
+            self.textLb.isHidden = false
+            
+            self.textLb.snp.remakeConstraints { (make) in
+                make.left.equalTo(kMargin)
+                make.right.equalTo(-kMargin)
+                make.top.equalTo(headIV.snp.bottom).offset(kMargin)
+                make.bottom.equalTo(-kMargin)
+            }
+            
+        }
     }
 }

@@ -25,19 +25,27 @@ class LKAudioView: LKCellContentView {
         let urlString = model.audio_thumbnail!
         playBtn.setImage(UIImage.init(named: "playButtonPlay"), for: .normal)
 
-        bgImageV.snp.makeConstraints({ (make) in
-            make.height.equalTo(kScreenW * model.audio_height! / model.audio_width!)
-            make.left.top.right.equalTo(0)
-        })
+        
         bgImageV.kf.setImage(with: URL.init(string: urlString), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
 
         playBtn.backgroundColor = UIColor.clear
-        playBtn.snp.makeConstraints({ (make) in
-            make.center.equalTo(bgImageV)
-        })
+        
 
     }
 
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        
+        bgImageV.snp.remakeConstraints({ (make) in
+            
+            make.edges.equalTo(UIEdgeInsets.zero)
+        })
+        
+        playBtn.snp.remakeConstraints({ (make) in
+            make.center.equalTo(bgImageV)
+        })
+    }
     @objc fileprivate func play(_ btn: UIButton) {
 
     }

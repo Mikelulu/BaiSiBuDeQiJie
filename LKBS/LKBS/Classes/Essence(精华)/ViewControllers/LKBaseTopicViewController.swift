@@ -87,7 +87,7 @@ class LKBaseTopicViewController: LKBaseViewController {
 
         self.tableView.snp.makeConstraints { (make) in
             make.left.top.right.equalTo(0)
-            make.height.equalTo(kScreenH - 64 - 49 - 44)
+            make.height.equalTo(kScreenH - kNavigationHeight - kTabbarHeight - 44)
         }
 
         /// 添加下拉刷新
@@ -186,8 +186,15 @@ extension LKBaseTopicViewController: UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        navigationController?.pushViewController(LKDetailViewController(), animated: true)
+        
+        let model = self.dataSource[indexPath.row]
+        
+        if model.type == "video" {
+            let VC = LKDetailViewController()
+            VC.model = model
+            navigationController?.pushViewController(VC, animated: true)
+            
+        }
     }
 
 }

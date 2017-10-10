@@ -30,7 +30,7 @@ public class LKTabbarController: UITabBarController {
 
     deinit {
 
-        kDealloc(self)
+        
     }
 
     public override func viewDidLoad() {
@@ -71,7 +71,7 @@ extension LKTabbarController {
 
             vc.tabBarItem.selectedImage = UIImage.init(named: selectedImgs[index])?.withRenderingMode(.alwaysOriginal)
 
-            vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : kSelectColor], for: .selected)
+            vc.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : kSelectColor], for: .selected)
         }
     }
 

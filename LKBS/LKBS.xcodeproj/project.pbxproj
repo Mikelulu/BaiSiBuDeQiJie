@@ -13,7 +13,6 @@
 		842350BE1F57FEAF00A3F9F8 /* LKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350BD1F57FEAF00A3F9F8 /* LKImageView.swift */; };
 		842350C01F57FEBD00A3F9F8 /* LKGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350BF1F57FEBD00A3F9F8 /* LKGifView.swift */; };
 		842350C21F57FECB00A3F9F8 /* LKVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350C11F57FECB00A3F9F8 /* LKVideoView.swift */; };
-		842350C41F57FED500A3F9F8 /* LKTextview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842350C31F57FED500A3F9F8 /* LKTextview.swift */; };
 		845467611F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */; };
 		845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */; };
 		845467661F0E0F6E009DEFA1 /* LKRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */; };
@@ -87,7 +86,6 @@
 		842350BD1F57FEAF00A3F9F8 /* LKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKImageView.swift; sourceTree = "<group>"; };
 		842350BF1F57FEBD00A3F9F8 /* LKGifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKGifView.swift; sourceTree = "<group>"; };
 		842350C11F57FECB00A3F9F8 /* LKVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKVideoView.swift; sourceTree = "<group>"; };
-		842350C31F57FED500A3F9F8 /* LKTextview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTextview.swift; sourceTree = "<group>"; };
 		845467601F0DDC6C009DEFA1 /* LKBaseTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKBaseTopicViewController.swift; sourceTree = "<group>"; };
 		845467621F0DF2B7009DEFA1 /* LKNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKNetworkManager.swift; sourceTree = "<group>"; };
 		845467651F0E0F6E009DEFA1 /* LKRecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRecommendController.swift; sourceTree = "<group>"; };
@@ -447,7 +445,6 @@
 				842350BD1F57FEAF00A3F9F8 /* LKImageView.swift */,
 				842350BF1F57FEBD00A3F9F8 /* LKGifView.swift */,
 				842350C11F57FECB00A3F9F8 /* LKVideoView.swift */,
-				842350C31F57FED500A3F9F8 /* LKTextview.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -930,7 +927,6 @@
 				8479632E1F2341F100DD919F /* LKDetailViewController.swift in Sources */,
 				846193401F0CE306008F5309 /* LKPageStyle.swift in Sources */,
 				846D12941EF3DF5E00567889 /* UI+Extension.swift in Sources */,
-				842350C41F57FED500A3F9F8 /* LKTextview.swift in Sources */,
 				842350C21F57FECB00A3F9F8 /* LKVideoView.swift in Sources */,
 				845467631F0DF2B7009DEFA1 /* LKNetworkManager.swift in Sources */,
 				846065111F14D827000315EC /* ZJSegmentStyle.m in Sources */,
@@ -1086,7 +1082,6 @@
 			baseConfigurationReference = E2201E2CD808E0D4DC4394CB /* Pods-LKBS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9N5X54645B;
 				INFOPLIST_FILE = LKBS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1094,7 +1089,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziding.LKBS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LKBS/Classes/Other/LKBS-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1103,7 +1098,6 @@
 			baseConfigurationReference = AC7C5A2A7B538437F066C257 /* Pods-LKBS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9N5X54645B;
 				INFOPLIST_FILE = LKBS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1111,7 +1105,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ziding.LKBS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LKBS/Classes/Other/LKBS-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

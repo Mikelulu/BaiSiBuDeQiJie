@@ -42,7 +42,5 @@ extension LKCellContentView {
         addSubview(bgImageV)
         bgImageV.addSubview(playBtn)
 
-        
     }
-
 }
